@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        tools:context=".DetailsTopic">
+
+        <LinearLayout
+            android:id="@+id/toolbar_details_topics_Screen"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="start"
+            android:orientation="horizontal"
+            android:padding="16dp"
+            android:weightSum="1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/img_back_detailstopics"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="4dp"
+                android:layout_weight="0.1"
+                android:src="@drawable/ic_arrow_paper" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="4dp"
+                android:layout_weight="0.7"
+                android:gravity="center"
+                android:text="@string/detailstopic"
+                android:textColor="@color/paper"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_countlike_detailstopics"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="0.1"
+                android:gravity="center"
+                android:text="15"
+                android:textColor="@color/paper"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="0.1"
+                app:cardCornerRadius="8dp">
+
+                <ImageView
+                    android:id="@+id/img_addlike_detailstopics"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="4dp"
+                    android:src="@drawable/like_false" />
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/toolbar_details_topics_Screen">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="10dp"
+                app:cardUseCompatPadding="true">
+
+                <ImageView
+                    android:id="@+id/img_content_detailstopics"
+                    android:layout_width="match_parent"
+                    android:layout_height="196dp"
+                    android:layout_margin="8dp"
+                    android:background="@drawable/shape_corner24"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/hairdresser" />
+
+
+            </androidx.cardview.widget.CardView>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="end"
+                android:layout_marginEnd="16dp"
+                android:orientation="horizontal"
+                android:padding="4dp">
+
+
+                <TextView
+                    android:id="@+id/tv_date_publication_detailstopics"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableStart="@drawable/ic_calendar_month"
+                    android:drawablePadding="8dp"
+                    android:fontFamily="sans-serif-condensed"
+                    android:text="1h ago"
+                    android:textColor="@color/black"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_title_detailstopics"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:fontFamily="sans-serif-black"
+                android:gravity="start"
+                android:text="نصئح مفيدة للحصول على اظافر طويلة وصحية "
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="24dp"
+                android:fontFamily="sans-serif-condensed"
+                android:gravity="center"
+                android:text="وصف النصيحة"
+                android:textColor="@color/paper"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_description_detailstopics"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:fontFamily="sans-serif-condensed"
+                android:gravity="start"
+                android:background="@color/grayback"
+                android:padding="4dp"
+                android:text="تعاني بعض النساء من مشكل تكسر الأظافر نظرا لهشاشتها و ضعف بنيتها، و للحصول على أظافر صحية عليك إتباع النصائح التالية:"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_like_post"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="24dp"
+                android:fontFamily="sans-serif-condensed"
+                android:gravity="center"
+                android:text="الحل بالخطوات:"
+                android:textColor="@color/paper"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_solve_SBS"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:fontFamily="sans-serif-condensed"
+                android:gravity="start"
+                android:background="@color/grayback"
+                android:padding="4dp"
+                android:text="• إبقاء أظافرك قصيرة لفترة معينة حتى تصبح أقوى فتنمو بعد
+ذلك بطريقة صحية.
+• تنظيف أظافرك بإستمرار و إزالة الأوساخ العالقة تحتها بإستخدام الفرشاة المخصصة لهذا الغرض. • تناولي الأغذية التي تحتوي على من الحديد مثل الخضار الورقية و البقول الحافة، لأنها تقوى الأظافر وتحميها من التكسر. • تجني عادة تركيب الأظافر الإصطناعية لتسببها في الإصابة بالفطريات.
+
+• عدم فتح العلب أو القوارير بإستخدام أظافرك. • ترك الأظافر بدون أي طلاء لأيام حتى تتنفس و تجدد خلاياها. • ضعي أظافرك لمدة 15 دقيقة في زيت الزيتون ثم اغسليها
+
+بالمياة. • الإبتعاد عن إستخدام مادة الأسيتون لإزالة طلاء الأظافر لأنها السبب الرئيسي لهشاشة الأظافر.• إبقاء أظافرك قصيرة لفترة معينة حتى تصبح أقوى فتنمو بعد
+ذلك بطريقة صحية.
+• تنظيف أظافرك بإستمرار و إزالة الأوساخ العالقة تحتها بإستخدام الفرشاة المخصصة لهذا الغرض. • تناولي الأغذية التي تحتوي على من الحديد مثل الخضار الورقية و البقول الحافة، لأنها تقوى الأظافر وتحميها من التكسر. • تجني عادة تركيب الأظافر الإصطناعية لتسببها في الإصابة بالفطريات.
+
+• عدم فتح العلب أو القوارير بإستخدام أظافرك. • ترك الأظافر بدون أي طلاء لأيام حتى تتنفس و تجدد خلاياها. • ضعي أظافرك لمدة 15 دقيقة في زيت الزيتون ثم اغسليها
+
+بالمياة. • الإبتعاد عن إستخدام مادة الأسيتون لإزالة طلاء الأظافر لأنها السبب الرئيسي لهشاشة الأظافر."
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

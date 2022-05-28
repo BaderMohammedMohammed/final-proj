@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView  xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:layout_height="match_parent">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".AddConsultation">
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="12dp"
+        android:weightSum="1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <ImageView
+            android:id="@+id/img_back_add_consultation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:padding="@dimen/_8sdp"
+            android:src="@drawable/ic_arrow_paper" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/_4sdp"
+            android:layout_weight="0.85"
+            android:gravity="center"
+            android:text="@string/add_consultation"
+            android:textColor="@color/paper"
+            android:textSize="@dimen/_20ssp"
+            android:textStyle="bold" />
+    </LinearLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_14ssp"
+        android:layout_marginTop="@dimen/_16sdp"
+        android:textStyle="bold"
+        android:text="أضف صورة خاصة بالاستشارة"/>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="@dimen/_16sdp"
+        app:cardElevation="@dimen/_10sdp"
+        android:layout_gravity="center"
+        app:cardUseCompatPadding="true">
+
+    <ImageView
+        android:id="@+id/img_content_add_consultation"
+        android:layout_width="@dimen/_86sdp"
+        android:layout_height="@dimen/_86sdp"
+        android:layout_margin="@dimen/_8sdp"
+        android:background="@drawable/shape_corner24"
+        android:scaleType="centerInside"
+        android:src="@drawable/ic_add_blue" />
+    </androidx.cardview.widget.CardView>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="start"
+        android:layout_marginStart="@dimen/_16sdp"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_14ssp"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:textStyle="bold"
+        android:text="@string/details_consultation"/>
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/et_desc_consultation"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_156sdp"
+        android:layout_margin="@dimen/_8sdp"
+        android:padding="@dimen/_16sdp"
+        android:textSize="@dimen/_14ssp"
+        android:gravity="start"
+        android:background="@drawable/shape_cornerbacground"
+        android:hint="اوصف الاستشارة بدقة"
+        />
+
+    <Button
+        android:id="@+id/btn_publich_topublic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/_16sdp"
+        android:background="@drawable/shape_botton_added"
+        android:text="@string/publich_topublic"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_18ssp"
+        android:textStyle="bold" />
+
+
+</LinearLayout>
+    </ScrollView>

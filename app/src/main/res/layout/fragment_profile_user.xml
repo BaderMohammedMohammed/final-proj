@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.FragmentProfileUser">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_gender"
+            android:layout_width="360dp"
+            android:layout_height="45dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/tv_fragment_profile"
+            android:textSize="20sp"
+            android:padding="8dp"
+            android:layout_gravity="center"
+            android:text="الجنس : ذكر" />
+
+        <TextView
+            android:id="@+id/tv_length"
+            android:layout_width="360dp"
+            android:layout_height="45dp"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/tv_fragment_profile"
+            android:textSize="20sp"
+            android:padding="8dp"
+            android:layout_gravity="center"
+            android:text="الطول : 175" />
+
+        <TextView
+            android:id="@+id/tv_weight"
+            android:layout_width="360dp"
+            android:layout_height="45dp"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/tv_fragment_profile"
+            android:textSize="20sp"
+            android:padding="8dp"
+            android:layout_gravity="center"
+            android:text="الوزن : 89" />
+
+        <TextView
+            android:id="@+id/tv_current_diseases"
+            android:layout_width="360dp"
+            android:layout_height="45dp"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/tv_fragment_profile"
+            android:textSize="20sp"
+            android:padding="8dp"
+            android:layout_gravity="center"
+            android:text="الامراض الحالية : سكر" />
+
+        <TextView
+            android:id="@+id/tv_age"
+            android:layout_width="360dp"
+            android:layout_height="45dp"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/tv_fragment_profile"
+            android:textSize="20sp"
+            android:padding="8dp"
+            android:layout_gravity="center"
+            android:text="العمر" />
+
+        <TextView
+            android:id="@+id/tv_previous_illnesses"
+            android:layout_width="360dp"
+            android:layout_height="45dp"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/tv_fragment_profile"
+            android:textSize="20sp"
+            android:padding="8dp"
+            android:layout_gravity="center"
+            android:text="الامراض السايقة : حمى" />
+
+        <TextView
+            android:id="@+id/tv_smoked"
+            android:layout_width="360dp"
+            android:layout_height="45dp"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/tv_fragment_profile"
+            android:textSize="20sp"
+            android:padding="8dp"
+            android:layout_gravity="center"
+            android:text="مدخن : لا" />
+    </LinearLayout>
+
+
+</FrameLayout>

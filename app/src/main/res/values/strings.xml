@@ -1,0 +1,50 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="app_name">Graduation Project</string>
+    <string name="body_post">body_post-body_post-body_post-body_post-body_post-body_post-body_post-body_post-body_post-body_post-body_post-body_post-body_post-body_post-body_post-body_post-body_post-body_post-body_post-body_post-body_post-body_post-body_post-body_post-body_post-body_post-body_post-body_post-body_post-body_post-body_post-</string>
+    <string name="comment">Comment</string>
+    <string name="like">Like</string>
+    <string name="food_meal">أكلات صحية</string>
+    <string name="home">الرئيسية</string>
+    <string name="acount">الحساب</string>
+    <string name="sheet">استشارات</string>
+    <string name="last_news">اخر الاخبار</string>
+    <string name="how_doyou_add">ماذا تريد انا تضيف؟</string>
+    <string name="add_consultation_public" translatable="false">أضف إستشارة عامة</string>
+    <string name="add_consultation_private" translatable="false">أضف إستشارة خاصة</string>
+    <string name="add_new_eater">أضاف أكلة جديدة</string>
+    <string name="exit">انهاء</string>
+    <string name="topics">الموضوعات</string>
+    <string name="detailstopic">تفاصيل الموضوع</string>
+    <string name="name_food">اسم الاكلة</string>
+    <string name="numof_people" translatable="false">عدد الاشخاص</string>
+    <string name="name_publisher">اسم الناشر</string>
+    <string name="detailsfood">تفاصيل الاكلة</string>
+    <string name="comments" translatable="false">التعليقات</string>
+    <string name="add_consultation">اضافة استشارة عامة</string>
+    <string name="details_consultation">تفاصيل الاستشارة</string>
+    <string name="publich_topublic">نشر للعامة</string>
+    <string name="add_food">اضافة اكلة</string>
+    <string name="howtoprepare" translatable="false">طريقة التحضير</string>
+    <string name="enter_name_food">ادخل اسم الاكلة</string>
+    <string name="enterhowtoprepare">ادخل طريقة التحضير</string>
+    <string name="enter_components">ادخل المكونات</string>
+    <string name="components">المكونات</string>
+    <string name="addimg_food">اضف صورة خاصة بالاكلة</string>
+    <string name="preparationtime">مدة التحضير</string>
+    <string name="publich">نشر</string>
+    <string-array name="array_subtype_four">
+        <item>فرع1</item>
+        <item>فرع2</item>
+        <item>فرع3</item>
+        <item>فرع4</item>
+    </string-array>
+
+    <string-array name="gender">
+        <item>gender :</item>
+        <item>male</item>
+        <item>female</item>
+    </string-array>
+    <string name="hello_blank_fragment" tools:ignore="MissingTranslation">Hello blank fragment</string>
+    <string name="consultion">details_conslution</string>
+
+</resources>

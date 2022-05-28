@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Final_proj1/app/src/main/res/drawable/btn_no.xml" value="0.355" />
+        <entry key="..\:/Final_proj1/app/src/main/res/drawable/btn_save.xml" value="0.2035" />
+        <entry key="..\:/Final_proj1/app/src/main/res/drawable/btn_yse.xml" value="0.355" />
+        <entry key="..\:/Final_proj1/app/src/main/res/drawable/edit.xml" value="0.355" />
+        <entry key="..\:/Final_proj1/app/src/main/res/drawable/et.xml" value="0.355" />
+        <entry key="..\:/Final_proj1/app/src/main/res/drawable/ic_mini_add_blue.xml" value="0.2035" />
+        <entry key="..\:/Final_proj1/app/src/main/res/drawable/img_account.xml" value="0.355" />
+        <entry key="..\:/Final_proj1/app/src/main/res/drawable/setting.xml" value="0.355" />
+        <entry key="..\:/Final_proj1/app/src/main/res/drawable/tx_language.xml" value="0.2035" />
+        <entry key="..\:/Final_proj1/app/src/main/res/drawable/visitor.xml" value="0.355" />
+        <entry key="..\:/Final_proj1/app/src/main/res/layout/activity_add_consultation.xml" value="0.3625" />
+        <entry key="..\:/Final_proj1/app/src/main/res/layout/activity_add_food.xml" value="0.3625" />
+        <entry key="..\:/Final_proj1/app/src/main/res/layout/activity_details_food.xml" value="0.3625" />
+        <entry key="..\:/Final_proj1/app/src/main/res/layout/activity_details_topic.xml" value="0.3625" />
+        <entry key="..\:/Final_proj1/app/src/main/res/layout/activity_food_screen.xml" value="0.3625" />
+        <entry key="..\:/Final_proj1/app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="..\:/Final_proj1/app/src/main/res/layout/activity_main_setting.xml" value="0.25" />
+        <entry key="..\:/Final_proj1/app/src/main/res/layout/activity_personal_information_screen.xml" value="0.33" />
+        <entry key="..\:/Final_proj1/app/src/main/res/layout/activity_signin.xml" value="0.3625" />
+        <entry key="..\:/Final_proj1/app/src/main/res/layout/activity_signup.xml" value="0.3625" />
+        <entry key="..\:/Final_proj1/app/src/main/res/layout/activity_topic_list.xml" value="0.3625" />
+        <entry key="..\:/Final_proj1/app/src/main/res/layout/activity_topics.xml" value="0.3625" />
+        <entry key="..\:/Final_proj1/app/src/main/res/layout/bottom_sheet_layout.xml" value="0.3625" />
+        <entry key="..\:/Final_proj1/app/src/main/res/layout/custom_dialog_email.xml" value="0.3625" />
+        <entry key="..\:/Final_proj1/app/src/main/res/layout/custom_dialog_password.xml" value="0.3625" />
+        <entry key="..\:/Final_proj1/app/src/main/res/layout/custom_dialog_signout.xml" value="0.3625" />
+        <entry key="..\:/Final_proj1/app/src/main/res/layout/fragment__account__screen.xml" value="0.33" />
+        <entry key="..\:/Final_proj1/app/src/main/res/layout/fragment_consultion.xml" value="0.18541666666666667" />
+        <entry key="..\:/Final_proj1/app/src/main/res/layout/fragment_food.xml" value="0.3484375" />
+        <entry key="..\:/Final_proj1/app/src/main/res/layout/fragment_home.xml" value="0.1" />
+        <entry key="..\:/Final_proj1/app/src/main/res/layout/fragment_item_bottomsheet_dialog.xml" value="0.3625" />
+        <entry key="..\:/Final_proj1/app/src/main/res/layout/fragment_profile_user.xml" value="0.3625" />
+        <entry key="..\:/Final_proj1/app/src/main/res/layout/item_post_layout.xml" value="0.3625" />
+        <entry key="..\:/Final_proj1/app/src/main/res/layout/item_rv_food.xml" value="0.65283540802213" />
+        <entry key="..\:/Final_proj1/app/src/main/res/layout/item_rv_topiclist.xml" value="0.3625" />
+        <entry key="..\:/Final_proj1/app/src/main/res/layout/item_rvtopics.xml" value="0.3625" />
+        <entry key="..\:/Final_proj1/app/src/main/res/layout/test.xml" value="0.1292824822236587" />
+        <entry key="..\:/Final_proj1/app/src/main/res/layout/tool_bar.xml" value="0.3625" />
+        <entry key="..\:/Final_proj1/app/src/main/res/menu/bottom_nav_menu.xml" value="0.3625" />
+        <entry key="..\:/Users/OMEN/Desktop/Final_proj1-master/Final_proj1-master/app/src/main/res/drawable/edit.xml" value="0.215" />
+        <entry key="..\:/Users/OMEN/Desktop/Final_proj1-master/Final_proj1-master/app/src/main/res/drawable/user2.xml" value="0.215" />
+        <entry key="..\:/Users/OMEN/Desktop/Final_proj1-master/Final_proj1-master/app/src/main/res/layout/activity_add_consultation.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/OMEN/Desktop/Final_proj1-master/Final_proj1-master/app/src/main/res/layout/activity_details_consultion.xml" value="0.264" />
+        <entry key="..\:/Users/OMEN/Desktop/Final_proj1-master/Final_proj1-master/app/src/main/res/layout/activity_details_food.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/OMEN/Desktop/Final_proj1-master/Final_proj1-master/app/src/main/res/layout/activity_details_topic.xml" value="0.264" />
+        <entry key="..\:/Users/OMEN/Desktop/Final_proj1-master/Final_proj1-master/app/src/main/res/layout/activity_food_screen.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/OMEN/Desktop/Final_proj1-master/Final_proj1-master/app/src/main/res/layout/activity_main.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/OMEN/Desktop/Final_proj1-master/Final_proj1-master/app/src/main/res/layout/activity_main_setting.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/OMEN/Desktop/Final_proj1-master/Final_proj1-master/app/src/main/res/layout/activity_personal_information_screen.xml" value="0.264" />
+        <entry key="..\:/Users/OMEN/Desktop/Final_proj1-master/Final_proj1-master/app/src/main/res/layout/activity_signin.xml" value="0.264" />
+        <entry key="..\:/Users/OMEN/Desktop/Final_proj1-master/Final_proj1-master/app/src/main/res/layout/activity_signup.xml" value="0.264" />
+        <entry key="..\:/Users/OMEN/Desktop/Final_proj1-master/Final_proj1-master/app/src/main/res/layout/activity_topic_list.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/OMEN/Desktop/Final_proj1-master/Final_proj1-master/app/src/main/res/layout/activity_topics.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/OMEN/Desktop/Final_proj1-master/Final_proj1-master/app/src/main/res/layout/bottom_sheet_layout.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/OMEN/Desktop/Final_proj1-master/Final_proj1-master/app/src/main/res/layout/custom_dialog_email.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/OMEN/Desktop/Final_proj1-master/Final_proj1-master/app/src/main/res/layout/custom_dialog_password.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/OMEN/Desktop/Final_proj1-master/Final_proj1-master/app/src/main/res/layout/custom_dialog_signout.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/OMEN/Desktop/Final_proj1-master/Final_proj1-master/app/src/main/res/layout/fragment__account__screen.xml" value="0.264" />
+        <entry key="..\:/Users/OMEN/Desktop/Final_proj1-master/Final_proj1-master/app/src/main/res/layout/fragment_account.xml" value="0.18802083333333333" />
+        <entry key="..\:/Users/OMEN/Desktop/Final_proj1-master/Final_proj1-master/app/src/main/res/layout/fragment_consultion.xml" value="0.18802083333333333" />
+        <entry key="..\:/Users/OMEN/Desktop/Final_proj1-master/Final_proj1-master/app/src/main/res/layout/fragment_dialog_email.xml" value="0.18802083333333333" />
+        <entry key="..\:/Users/OMEN/Desktop/Final_proj1-master/Final_proj1-master/app/src/main/res/layout/fragment_dialog_password.xml" value="0.18802083333333333" />
+        <entry key="..\:/Users/OMEN/Desktop/Final_proj1-master/Final_proj1-master/app/src/main/res/layout/fragment_dialog_sign_out.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/OMEN/Desktop/Final_proj1-master/Final_proj1-master/app/src/main/res/layout/fragment_food.xml" value="0.264" />
+        <entry key="..\:/Users/OMEN/Desktop/Final_proj1-master/Final_proj1-master/app/src/main/res/layout/fragment_home.xml" value="0.11893736290519133" />
+        <entry key="..\:/Users/OMEN/Desktop/Final_proj1-master/Final_proj1-master/app/src/main/res/layout/fragment_item_bottomsheet_dialog.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/OMEN/Desktop/Final_proj1-master/Final_proj1-master/app/src/main/res/layout/fragment_profile_user.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/OMEN/Desktop/Final_proj1-master/Final_proj1-master/app/src/main/res/layout/item_post_layout.xml" value="0.264" />
+        <entry key="..\:/Users/OMEN/Desktop/Final_proj1-master/Final_proj1-master/app/src/main/res/layout/item_rv_food.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/OMEN/Desktop/Final_proj1-master/Final_proj1-master/app/src/main/res/layout/item_rv_topiclist.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/OMEN/Desktop/Final_proj1-master/Final_proj1-master/app/src/main/res/layout/item_rvtopics.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/OMEN/Desktop/Final_proj1-master/Final_proj1-master/app/src/main/res/layout/tool_bar.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/OMEN/Desktop/Final_proj1-master/Final_proj1-master/app/src/main/res/menu/bottom_nav_menu.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/OMEN/Desktop/Final_proj1-master/Final_proj1-master/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.124" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

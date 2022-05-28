@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/white"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    tools:context=".AddFood">
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="12dp"
+        android:weightSum="1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <ImageView
+            android:id="@+id/img_back_add_food"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:padding="@dimen/_8sdp"
+            android:src="@drawable/ic_arrow_paper" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/_4sdp"
+            android:layout_weight="0.85"
+            android:gravity="center"
+            android:text="@string/add_food"
+            android:textColor="@color/paper"
+            android:textSize="@dimen/_20ssp"
+            android:textStyle="bold" />
+    </LinearLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="start"
+        android:layout_marginStart="@dimen/_16sdp"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_14ssp"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:textStyle="bold"
+        android:text="@string/enter_name_food"/>
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/et_namefood_addfood"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_8sdp"
+        android:padding="@dimen/_8sdp"
+        android:textSize="@dimen/_14ssp"
+        android:gravity="start"
+        android:background="@drawable/shape_cornerbacground"
+        android:hint="@string/name_food"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="start"
+        android:layout_marginStart="@dimen/_16sdp"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_14ssp"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:textStyle="bold"
+        android:text="@string/enter_components"
+ />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/et_enter_components_addfood"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_86sdp"
+        android:layout_margin="@dimen/_8sdp"
+        android:padding="@dimen/_8sdp"
+        android:textSize="@dimen/_14ssp"
+        android:gravity="start"
+        android:background="@drawable/shape_cornerbacground"
+        android:hint="@string/components"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="start"
+        android:layout_marginStart="@dimen/_16sdp"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_14ssp"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:textStyle="bold"
+        android:text="@string/enterhowtoprepare"
+        />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/et_howtomake_addfood"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_86sdp"
+        android:layout_margin="@dimen/_8sdp"
+        android:padding="@dimen/_8sdp"
+        android:textSize="@dimen/_14ssp"
+        android:gravity="start"
+        android:background="@drawable/shape_cornerbacground"
+        android:hint="@string/howtoprepare"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="1">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_8sdp"
+            android:layout_weight="0.5"
+            android:fontFamily="sans-serif-condensed"
+            android:gravity="center"
+            android:text="@string/preparationtime"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_14ssp" />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_8sdp"
+            android:layout_weight="0.5"
+            android:fontFamily="sans-serif-condensed"
+            android:gravity="center"
+            android:text="@string/numof_people"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_14ssp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_4sdp"
+        android:paddingStart="@dimen/_8sdp"
+        android:paddingEnd="@dimen/_8sdp"
+        android:orientation="horizontal"
+        android:weightSum="1">
+
+        <Spinner
+            android:id="@+id/sp_preparationtime_add_food"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_4sdp"
+            android:layout_weight="0.5"
+            android:entries="@array/array_subtype_four"
+            android:background="@drawable/shape_cornerbacground"
+            android:padding="@dimen/_8sdp"
+            android:textDirection="anyRtl" />
+
+        <Spinner
+            android:id="@+id/sp_numof_people_add_food"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_4sdp"
+            android:layout_weight="0.5"
+            android:entries="@array/array_subtype_four"
+            android:background="@drawable/shape_cornerbacground"
+            android:padding="@dimen/_8sdp"
+            android:textDirection="anyRtl" />
+    </LinearLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_16sdp"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_10ssp"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:textStyle="bold"
+        android:text="@string/addimg_food"
+        />
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="@dimen/_16sdp"
+        app:cardElevation="@dimen/_10sdp"
+        android:layout_gravity="start"
+        app:cardUseCompatPadding="true">
+
+        <ImageView
+            android:id="@+id/img_food_add_food"
+            android:layout_width="@dimen/_86sdp"
+            android:layout_height="@dimen/_86sdp"
+            android:layout_margin="@dimen/_8sdp"
+            android:background="@drawable/shape_corner24"
+            android:scaleType="centerInside"
+            android:src="@drawable/ic_mini_add_blue" />
+    </androidx.cardview.widget.CardView>
+
+
+    <Button
+        android:id="@+id/btn_publich_add_food"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+
+        android:layout_marginBottom="@dimen/_8sdp"
+        android:background="@drawable/shape_botton_added"
+        android:text="@string/publich"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_18ssp"
+        android:textStyle="bold" />
+</LinearLayout>
+    </ScrollView>
