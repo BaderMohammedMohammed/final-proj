@@ -15,6 +15,7 @@ import com.example.final_proj1.databinding.ActivityAddFoodBinding;
 public class AddFood extends AppCompatActivity {
 ActivityAddFoodBinding binding;
     private Uri uri;
+    String name ;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
