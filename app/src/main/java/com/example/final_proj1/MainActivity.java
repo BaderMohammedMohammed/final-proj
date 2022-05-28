@@ -28,6 +28,7 @@ public class MainActivity extends AppCompatActivity implements DialogSignOut.OnN
         setContentView(binding.getRoot());
 
         bottomNavigationAdapter = new BottomNavigationAdapter(this);
+        String ss = "as";
 
         binding.vp.setAdapter(bottomNavigationAdapter);
         binding.vp.setUserInputEnabled(false);
