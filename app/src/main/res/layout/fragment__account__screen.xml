@@ -25,15 +25,15 @@
         <ImageView
             android:id="@+id/img_Account"
             android:layout_width="match_parent"
-            android:layout_height="120dp"
-            android:layout_marginTop="70dp"
+            android:layout_height="@dimen/_110sdp"
+            android:layout_marginTop="@dimen/_60sdp"
             android:background="@drawable/img_account"
-            android:paddingEnd="60dp"
-            android:paddingStart="60dp"
-            android:paddingBottom="15dp"
-            android:paddingTop="15dp"
-            android:layout_marginStart="107dp"
-            android:layout_marginEnd="107dp"
+            android:paddingEnd="@dimen/_50sdp"
+            android:paddingStart="@dimen/_50sdp"
+            android:paddingBottom="@dimen/_15sdp"
+            android:paddingTop="@dimen/_12sdp"
+            android:layout_marginStart="100dp"
+            android:layout_marginEnd="100dp"
             android:layout_gravity="center"
             android:src="@drawable/user2" />
 
@@ -42,40 +42,43 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginTop="5dp"
-            android:textSize="18sp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:textSize="@dimen/_18ssp"
             android:textColor="@color/bader_green"
             android:text="تغيير" />
 
         <TextView
             android:id="@+id/tv_userAccount"
-            android:layout_width="241dp"
-            android:layout_height="40dp"
-            android:paddingStart="15dp"
-            android:paddingTop="7dp"
-            android:paddingBottom="7dp"
+            android:layout_width="@dimen/_240sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:paddingStart="@dimen/_15sdp"
+            android:paddingTop="@dimen/_7sdp"
+            android:paddingBottom="@dimen/_7sdp"
             android:background="@drawable/img_account"
             android:layout_gravity="center"
-            android:layout_marginTop="10dp"
-            android:textSize="18sp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:textSize="@dimen/_18ssp"
             android:textColor="#000"
             android:text="اسم المستخدم" />
 
         <LinearLayout
-            android:layout_width="343dp"
-            android:layout_height="330dp"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_250sdp"
             android:layout_gravity="center"
+            android:layout_marginEnd="@dimen/_15sdp"
+            android:layout_marginStart="@dimen/_15sdp"
             android:orientation="vertical"
             android:background="@drawable/img_account"
-            android:layout_marginTop="57dp">
+            android:layout_marginTop="@dimen/_30sdp">
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/Personal"
-                android:layout_width="@dimen/_150sdp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="start"
-                android:layout_marginStart="7dp"
-                android:layout_marginTop="17dp">
+                android:layout_marginEnd="@dimen/_15sdp"
+                android:layout_marginStart="@dimen/_15sdp"
+                android:layout_marginTop="@dimen/_20sdp">
 
                 <ImageView
                     android:id="@+id/img_edit"
@@ -87,23 +90,25 @@
                     android:id="@+id/tv_edit"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="15dp"
+                    android:layout_marginStart="@dimen/_15sdp"
                     android:gravity="center"
                     android:textStyle="bold"
                     android:layout_gravity="center"
                     android:layout_weight="1"
                     android:textColor="#000"
-                    android:textSize="15sp"
+                    android:textSize="@dimen/_12ssp"
                     android:text="تعديل الملف الشخصي" />
 
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
-                android:layout_width="@dimen/_150sdp"
+                android:id="@+id/account"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="start"
-                android:layout_marginStart="7dp"
-                android:layout_marginTop="17dp">
+                android:layout_marginEnd="@dimen/_15sdp"
+                android:layout_marginStart="@dimen/_15sdp"
+                android:layout_marginTop="@dimen/_10sdp">
 
                 <ImageView
                     android:id="@+id/img_user"
@@ -117,21 +122,22 @@
                     android:layout_height="wrap_content"
                     android:textStyle="bold"
                     android:gravity="center"
-                    android:textSize="15sp"
+                    android:textSize="@dimen/_12ssp"
                     android:textColor="#000"
                     android:layout_gravity="center"
-                    android:layout_marginStart="15dp"
+                    android:layout_marginStart="@dimen/_15sdp"
                     android:text="حالاتي" />
 
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/Settings"
-                android:layout_width="@dimen/_150sdp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="start"
-                android:layout_marginStart="7dp"
-                android:layout_marginTop="17dp">
+                android:layout_marginEnd="@dimen/_15sdp"
+                android:layout_marginStart="@dimen/_15sdp"
+                android:layout_marginTop="@dimen/_10sdp">
 
 
                 <ImageView
@@ -146,21 +152,22 @@
                     android:layout_height="wrap_content"
                     android:textStyle="bold"
                     android:gravity="center"
-                    android:textSize="15sp"
+                    android:textSize="@dimen/_12ssp"
                     android:textColor="#000"
                     android:layout_gravity="center"
-                    android:layout_marginStart="15dp"
+                    android:layout_marginStart="@dimen/_15sdp"
                     android:text="الاعدادات" />
 
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/SignOut"
-                android:layout_width="@dimen/_150sdp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="start"
-                android:layout_marginStart="7dp"
-                android:layout_marginTop="17dp">
+                android:layout_marginEnd="@dimen/_15sdp"
+                android:layout_marginStart="@dimen/_15sdp"
+                android:layout_marginTop="@dimen/_10sdp">
 
                 <ImageView
                     android:id="@+id/img_logout"
@@ -174,19 +181,20 @@
                     android:layout_height="wrap_content"
                     android:textStyle="bold"
                     android:gravity="center"
-                    android:textSize="15sp"
+                    android:textSize="@dimen/_12ssp"
                     android:textColor="#000"
                     android:layout_gravity="center"
-                    android:layout_marginStart="15dp"
+                    android:layout_marginStart="@dimen/_15sdp"
                     android:text="تسجيل الخروج" />
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
-                android:layout_width="@dimen/_150sdp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="start"
-                android:layout_marginStart="7dp"
-                android:layout_marginTop="17dp">
+                android:layout_marginEnd="@dimen/_15sdp"
+                android:layout_marginStart="@dimen/_15sdp"
+                android:layout_marginTop="@dimen/_10sdp">
 
                 <ImageView
                     android:id="@+id/img_visitor"
@@ -200,10 +208,10 @@
                     android:layout_height="wrap_content"
                     android:textStyle="bold"
                     android:gravity="center"
-                    android:textSize="15sp"
+                    android:textSize="@dimen/_12ssp"
                     android:textColor="#000"
                     android:layout_gravity="center"
-                    android:layout_marginStart="15dp"
+                    android:layout_marginStart="@dimen/_15sdp"
                     android:text="الدخول كزائر" />
 
 
@@ -220,7 +228,7 @@
             android:layout_gravity="center"
             android:textStyle="bold"
             android:textSize="20sp"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="@dimen/_10sdp"
             android:textColor="@color/bader_green"/>
     </LinearLayout>
 

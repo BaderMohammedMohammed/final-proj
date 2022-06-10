@@ -8,65 +8,88 @@
     tools:context=".MainActivity">
 
 
-    <com.google.android.material.bottomappbar.BottomAppBar
-        android:id="@+id/bottom_app_bar"
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/fragmentMain"
+        android:name="com.example.final_proj1.fragments.HomeFragment"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom"
-        android:layout_marginBottom="0dp"
-        app:fabCradleMargin="20dp"
-        app:fabCradleRoundedCornerRadius="20dp"
-        app:fabCradleVerticalOffset="10dp"
-        app:hideOnScroll="true"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:ignore="BottomAppBar">
-
-
-        <com.google.android.material.bottomnavigation.BottomNavigationView
-            android:id="@+id/Bottom_Navigation_View"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:backgroundTint="@color/bader_green"
-            android:background="@android:color/transparent"
-            app:menu="@menu/bottom_nav_menu" />
-
-
-    </com.google.android.material.bottomappbar.BottomAppBar>
-
-
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/fab"
-        style="@style/Theme.AppCompat.DayNight"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-
-        android:layout_marginStart="0dp"
-        android:layout_marginTop="0dp"
-        android:layout_marginBottom="0dp"
-        android:backgroundTint="@color/white"
-        android:elevation="6dp"
-        android:src="@drawable/ic_add"
-        app:hideOnScroll="true"
-        app:layout_anchor="@id/bottom_app_bar"
-        app:layout_behavior="com.google.android.material.behavior.HideBottomViewOnScrollBehavior"
-        app:layout_constraintBottom_toTopOf="@+id/bottom_app_bar"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/bottom_app_bar"
-        app:layout_constraintTop_toTopOf="@+id/bottom_app_bar" />
-
-    <androidx.viewpager2.widget.ViewPager2
-        android:id="@+id/vp"
-        android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginTop="0dp"
-        android:layout_marginBottom="0dp"
-        app:layout_constraintBottom_toTopOf="@+id/bottom_app_bar"
+        app:layout_constraintBottom_toTopOf="@+id/bottomNav"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <com.etebarian.meowbottomnavigation.MeowBottomNavigation
+        android:id="@+id/bottomNav"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:mbn_backgroundBottomColor="@color/bader_green"
+        app:mbn_circleColor="@color/white"
+        app:mbn_defaultIconColor="@color/white"
+        app:mbn_selectedIconColor="@color/bader_green" />
+
+
+
+    <!--    <com.google.android.material.bottomappbar.BottomAppBar-->
+<!--        android:id="@+id/bottom_app_bar"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_gravity="bottom"-->
+<!--        android:layout_marginBottom="0dp"-->
+<!--        app:fabCradleMargin="20dp"-->
+<!--        app:fabCradleRoundedCornerRadius="20dp"-->
+<!--        app:fabCradleVerticalOffset="10dp"-->
+<!--        app:hideOnScroll="true"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        tools:ignore="BottomAppBar">-->
+
+
+<!--        <com.google.android.material.bottomnavigation.BottomNavigationView-->
+<!--            android:id="@+id/Bottom_Navigation_View"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:backgroundTint="@color/bader_green"-->
+<!--            android:background="@android:color/transparent"-->
+<!--            app:menu="@menu/bottom_nav_menu" />-->
+
+
+<!--    </com.google.android.material.bottomappbar.BottomAppBar>-->
+
+
+<!--    <com.google.android.material.floatingactionbutton.FloatingActionButton-->
+<!--        android:id="@+id/fab"-->
+<!--        style="@style/Theme.AppCompat.DayNight"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_gravity="center"-->
+<!--        android:layout_marginStart="0dp"-->
+<!--        android:layout_marginTop="0dp"-->
+<!--        android:layout_marginBottom="0dp"-->
+<!--        android:backgroundTint="@color/white"-->
+<!--        android:elevation="6dp"-->
+<!--        android:src="@drawable/ic_add"-->
+<!--        app:hideOnScroll="true"-->
+<!--        app:layout_anchor="@id/bottom_app_bar"-->
+<!--        app:layout_behavior="com.google.android.material.behavior.HideBottomViewOnScrollBehavior"-->
+<!--        app:layout_constraintBottom_toTopOf="@+id/bottom_app_bar"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="@+id/bottom_app_bar"-->
+<!--        app:layout_constraintTop_toTopOf="@+id/bottom_app_bar" />-->
+
+<!--    <androidx.viewpager2.widget.ViewPager2-->
+<!--        android:id="@+id/vp"-->
+<!--        android:layout_width="0dp"-->
+<!--        android:layout_height="0dp"-->
+<!--        android:layout_marginTop="0dp"-->
+<!--        android:layout_marginBottom="0dp"-->
+<!--        app:layout_constraintBottom_toTopOf="@+id/bottom_app_bar"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent" />-->
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -34,17 +34,17 @@ public class bottom_sheet_DialogFragment extends BottomSheetDialogFragment {
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
-        binding.btnCloseDialog.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-dismiss();
-            }
-        });
+//        binding.btnCloseDialog.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//dismiss();
+//            }
+//        });
         binding.bsheetitem1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(getContext(),AddConsultation.class));
-                dismiss();
+//                dismiss();
             }
         });
         binding.bsheetitem2.setOnClickListener(new View.OnClickListener() {
@@ -57,7 +57,7 @@ dismiss();
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(getContext(),AddFood.class));
-                dismiss();
+//                dismiss();
 
             }
         });
