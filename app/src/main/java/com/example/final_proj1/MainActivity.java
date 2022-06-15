@@ -38,7 +38,7 @@ public class MainActivity extends AppCompatActivity implements DialogSignOut.OnN
 
 //        bottomNavigationAdapter = new BottomNavigationAdapter(this);
 
-        binding.bottomNav.add(new MeowBottomNavigation.Model(1 , R.drawable.ic_home));
+        binding.bottomNav.add(new MeowBottomNavigation.Model(1 , R.drawable.ic_home ));
         binding.bottomNav.add(new MeowBottomNavigation.Model(2 , R.drawable.ic_restaurant));
         binding.bottomNav.add(new MeowBottomNavigation.Model(3 , R.drawable.ic_add));
         binding.bottomNav.add(new MeowBottomNavigation.Model(4 , R.drawable.ic_sheet));
