@@ -131,7 +131,7 @@
                         android:id="@+id/img_profileuser_detailsConsultion"
                         android:layout_width="48dp"
                         android:layout_height="48dp"
-                        android:src="@drawable/profile" />
+                        android:src="@drawable/profile_img" />
 
                     <TextView
                         android:id="@+id/tv_name_publisher_detailsConsultion"
