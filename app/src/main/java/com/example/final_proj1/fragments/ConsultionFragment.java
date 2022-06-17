@@ -15,7 +15,7 @@ import com.example.final_proj1.databinding.FragmentConsultionBinding;
 
 public class ConsultionFragment extends Fragment {
     FragmentConsultionBinding binding ;
-
+    // test
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
