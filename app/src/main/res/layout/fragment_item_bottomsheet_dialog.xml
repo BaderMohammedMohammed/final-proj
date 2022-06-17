@@ -10,7 +10,8 @@
         android:id="@+id/tv_label_dialog_sheet"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="16dp"
+        android:layout_marginTop="@dimen/_50sdp"
+        android:layout_marginBottom="@dimen/_15sdp"
         android:fontFamily="sans-serif-condensed"
         android:text="@string/how_doyou_add"
         android:textColor="@color/greenly"
@@ -202,17 +203,17 @@
 
 
 
-    <Button
-        android:id="@+id/btn_close_dialog"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/exit"
-        android:textColor="@color/white"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        android:background="@drawable/shape_bottom_sheetdialog"
-        android:layout_marginBottom="@dimen/_8sdp"
+<!--    <Button-->
+<!--        android:id="@+id/btn_close_dialog"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="@string/exit"-->
+<!--        android:textColor="@color/white"-->
+<!--        android:textSize="18sp"-->
+<!--        android:textStyle="bold"-->
+<!--        android:background="@drawable/shape_bottom_sheetdialog"-->
+<!--        android:layout_marginBottom="@dimen/_8sdp"-->
 
-        />
+<!--        />-->
 
 </LinearLayout>

@@ -2,24 +2,33 @@ package com.example.final_proj1;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
 
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Toast;
 
+import com.etebarian.meowbottomnavigation.MeowBottomNavigation;
 import com.example.final_proj1.Adapter.BottomNavigationAdapter;
 import com.example.final_proj1.Adapter.Postadapter;
 import com.example.final_proj1.Dialog.DialogSignOut;
 import com.example.final_proj1.Models.Post;
 import com.example.final_proj1.databinding.ActivityMainBinding;
+import com.example.final_proj1.fragments.ConsultionFragment;
+import com.example.final_proj1.fragments.FoodFragment;
+import com.example.final_proj1.fragments.Fragment_Account_Screen;
+import com.example.final_proj1.fragments.HomeFragment;
 import com.google.android.material.navigation.NavigationBarView;
 
 import java.util.ArrayList;
 
+import kotlin.Unit;
+import kotlin.jvm.functions.Function1;
+
 public class MainActivity extends AppCompatActivity implements DialogSignOut.OnNegativeSignOut , DialogSignOut.OnPositiveSignOut {
     ActivityMainBinding binding;
-    BottomNavigationAdapter bottomNavigationAdapter;
+//    BottomNavigationAdapter bottomNavigationAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,50 +36,92 @@ public class MainActivity extends AppCompatActivity implements DialogSignOut.OnN
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
-        bottomNavigationAdapter = new BottomNavigationAdapter(this);
-        String ss = "mousa";
+//        bottomNavigationAdapter = new BottomNavigationAdapter(this);
 
-        binding.vp.setAdapter(bottomNavigationAdapter);
-        binding.vp.setUserInputEnabled(false);
+        binding.bottomNav.add(new MeowBottomNavigation.Model(1 , R.drawable.ic_home ));
+        binding.bottomNav.add(new MeowBottomNavigation.Model(2 , R.drawable.ic_restaurant));
+        binding.bottomNav.add(new MeowBottomNavigation.Model(3 , R.drawable.ic_add));
+        binding.bottomNav.add(new MeowBottomNavigation.Model(4 , R.drawable.ic_sheet));
+        binding.bottomNav.add(new MeowBottomNavigation.Model(5 , R.drawable.ic_acount));
 
-        binding.BottomNavigationView.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
+        binding.bottomNav.setOnShowListener(new Function1<MeowBottomNavigation.Model, Unit>() {
             @Override
-            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-                switch (item.getItemId()) {
-                    case R.id.mehome: {
-                        binding.vp.setCurrentItem(0);
-                        binding.BottomNavigationView.getMenu().getItem(0).setChecked(true);
+            public Unit invoke(MeowBottomNavigation.Model model) {
+                Fragment fragment = null ;
+                switch (model.getId()){
+                    case 1 : {
+                        fragment = new HomeFragment() ;
                     }
                     break;
-                    case R.id.merestaurant: {
-                        binding.vp.setCurrentItem(1);
-                        binding.BottomNavigationView.getMenu().getItem(1).setChecked(true);
-
+                    case 2 : {
+                        fragment = new FoodFragment();
                     }
                     break;
-                    case R.id.mesheet: {
-                        binding.vp.setCurrentItem(2);
-                        binding.BottomNavigationView.getMenu().getItem(3).setChecked(true);
-
+                    case 3 : {
+                        bottom_sheet_DialogFragment psdf = new bottom_sheet_DialogFragment();
+                        psdf.show(getSupportFragmentManager(), null);
+                        fragment = psdf ;
                     }
                     break;
-                    case R.id.meacount: {
-                        binding.vp.setCurrentItem(3);
-                        binding.BottomNavigationView.getMenu().getItem(4).setChecked(true);
-
+                    case 4 : {
+                        fragment = new ConsultionFragment();
                     }
+                    break;
+                    case 5 : {
+                        fragment = new Fragment_Account_Screen();
+                    }
+                    break;
                 }
-                return false;
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragmentMain , fragment , null).commit();
+
+                return null;
             }
         });
 
-        binding.fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                bottom_sheet_DialogFragment psdf = new bottom_sheet_DialogFragment();
-                psdf.show(getSupportFragmentManager(), null);
-            }
-        });
+        binding.bottomNav.show(1 , true);
+
+
+//        binding.vp.setAdapter(bottomNavigationAdapter);
+//        binding.vp.setUserInputEnabled(false);
+//
+//        binding.BottomNavigationView.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
+//            @Override
+//            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+//                switch (item.getItemId()) {
+//                    case R.id.mehome: {
+//                        binding.vp.setCurrentItem(0);
+//                        binding.BottomNavigationView.getMenu().getItem(0).setChecked(true);
+//                    }
+//                    break;
+//                    case R.id.merestaurant: {
+//                        binding.vp.setCurrentItem(1);
+//                        binding.BottomNavigationView.getMenu().getItem(1).setChecked(true);
+//
+//                    }
+//                    break;
+//                    case R.id.mesheet: {
+//                        binding.vp.setCurrentItem(2);
+//                        binding.BottomNavigationView.getMenu().getItem(3).setChecked(true);
+//
+//                    }
+//                    break;
+//                    case R.id.meacount: {
+//                        binding.vp.setCurrentItem(3);
+//                        binding.BottomNavigationView.getMenu().getItem(4).setChecked(true);
+//
+//                    }
+//                }
+//                return false;
+//            }
+//        });
+//
+//        binding.fab.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                bottom_sheet_DialogFragment psdf = new bottom_sheet_DialogFragment();
+//                psdf.show(getSupportFragmentManager(), null);
+//            }
+//        });
     }
 
 

@@ -40,7 +40,7 @@
                 android:layout_weight="0.7"
                 android:gravity="center"
                 android:text="@string/detailstopic"
-                android:textColor="@color/paper"
+                android:textColor="@color/bader_green"
                 android:textSize="24sp"
                 android:textStyle="bold" />
 
@@ -52,7 +52,7 @@
                 android:layout_weight="0.1"
                 android:gravity="center"
                 android:text="15"
-                android:textColor="@color/paper"
+                android:textColor="@color/bader_green"
                 android:textSize="24sp"
                 android:textStyle="bold" />
 
@@ -144,7 +144,7 @@
                 android:fontFamily="sans-serif-condensed"
                 android:gravity="center"
                 android:text="وصف النصيحة"
-                android:textColor="@color/paper"
+                android:textColor="@color/bader_green"
                 android:textSize="18sp"
                 android:textStyle="bold" />
 
@@ -172,7 +172,7 @@
                 android:fontFamily="sans-serif-condensed"
                 android:gravity="center"
                 android:text="الحل بالخطوات:"
-                android:textColor="@color/paper"
+                android:textColor="@color/bader_green"
                 android:textSize="18sp"
                 android:textStyle="bold" />
 

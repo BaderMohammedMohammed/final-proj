@@ -1,14 +1,24 @@
 package com.example.final_proj1.Models;
 
+import androidx.annotation.NonNull;
+import androidx.room.Entity;
+import androidx.room.PrimaryKey;
 
+@Entity(tableName = "PostTable")
 public class Post {
+    @PrimaryKey(autoGenerate = true)
     private String id;
+    @NonNull
     private int comment_post, like_post;
+    @NonNull
     private String name_doctor, body_post, date_publication;
+    @NonNull
     private String img_doctor, img_content;
 
+    public Post() {
+    }
 
-    public Post(String id, int comment_post, int like_post, String name_doctor, String body_post, String date_publication, String img_doctor, String img_content) {
+    public Post(String id, int comment_post, int like_post, @NonNull String name_doctor, @NonNull String body_post, @NonNull String date_publication, @NonNull String img_doctor, @NonNull String img_content) {
         this.id = id;
         this.comment_post = comment_post;
         this.like_post = like_post;
@@ -43,43 +53,48 @@ public class Post {
         this.like_post = like_post;
     }
 
+    @NonNull
     public String getName_doctor() {
         return name_doctor;
     }
 
-    public void setName_doctor(String name_doctor) {
+    public void setName_doctor(@NonNull String name_doctor) {
         this.name_doctor = name_doctor;
     }
 
+    @NonNull
     public String getBody_post() {
         return body_post;
     }
 
-    public void setBody_post(String body_post) {
+    public void setBody_post(@NonNull String body_post) {
         this.body_post = body_post;
     }
 
+    @NonNull
     public String getDate_publication() {
         return date_publication;
     }
 
-    public void setDate_publication(String date_publication) {
+    public void setDate_publication(@NonNull String date_publication) {
         this.date_publication = date_publication;
     }
 
+    @NonNull
     public String getImg_doctor() {
         return img_doctor;
     }
 
-    public void setImg_doctor(String img_doctor) {
+    public void setImg_doctor(@NonNull String img_doctor) {
         this.img_doctor = img_doctor;
     }
 
+    @NonNull
     public String getImg_content() {
         return img_content;
     }
 
-    public void setImg_content(String img_content) {
+    public void setImg_content(@NonNull String img_content) {
         this.img_content = img_content;
     }
 }
