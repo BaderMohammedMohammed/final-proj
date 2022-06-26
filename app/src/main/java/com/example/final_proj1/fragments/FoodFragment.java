@@ -14,6 +14,7 @@ import android.view.ViewGroup;
 
 import com.example.final_proj1.Adapter.ListFoodadapter;
 import com.example.final_proj1.Adapter.OnRVitemclicklistenarListFood;
+import com.example.final_proj1.Database.MyViewModel;
 import com.example.final_proj1.DetailsFood;
 import com.example.final_proj1.Models.Food;
 import com.example.final_proj1.R;
@@ -25,6 +26,8 @@ public class FoodFragment extends Fragment {
     FragmentFoodBinding binding ;
     ArrayList<Food> foodArrayList=new ArrayList<>();
     ListFoodadapter foodadapter ;
+    private Object MyViewModel;
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -35,7 +38,7 @@ public class FoodFragment extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        foodadapter=new ListFoodadapter(foodArrayList, getContext(), new OnRVitemclicklistenarListFood() {
+        foodadapter=new ListFoodadapter(foodArrayList, getContext(), (com.example.final_proj1.Database.MyViewModel) MyViewModel, new OnRVitemclicklistenarListFood() {
             @Override
             public void onItemClicked(Food listFood) {
                 startActivity(new Intent(getContext(), DetailsFood.class));
