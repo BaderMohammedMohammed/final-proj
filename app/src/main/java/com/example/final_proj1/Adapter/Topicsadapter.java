@@ -1,5 +1,6 @@
 package com.example.final_proj1.Adapter;
 
+import android.app.Activity;
 import android.content.Context;
 import android.net.Uri;
 import android.view.LayoutInflater;
@@ -11,20 +12,36 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.bumptech.glide.Glide;
+import com.example.final_proj1.Database.MyViewModel;
+import com.example.final_proj1.Models.Post;
 import com.example.final_proj1.Models.Topics;
 import com.example.final_proj1.R;
+import com.example.final_proj1.databinding.ItemPostLayoutBinding;
+import com.example.final_proj1.databinding.ItemRvtopicsBinding;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class Topicsadapter extends RecyclerView.Adapter<Topicsadapter.topicsviewholder> {
-    ArrayList<Topics> topicsArrayList;
+    List<Topics> topicsList;
     Context context;
     OnRVitemclicklistenar listenar;
+    MyViewModel mvm;
 
-    public Topicsadapter(ArrayList<Topics> topicsArrayList, Context context, OnRVitemclicklistenar listenar) {
-        this.topicsArrayList = topicsArrayList;
+    public Topicsadapter(List<Topics> topicsList, Context context, OnRVitemclicklistenar listenar, MyViewModel mvm) {
+        this.topicsList = topicsList;
         this.context = context;
         this.listenar = listenar;
+        this.mvm = mvm;
+    }
+
+    public List<Topics> getTopicsList() {
+        return topicsList;
+    }
+
+    public void setTopicsList(List<Topics> topicsList) {
+        this.topicsList = topicsList;
     }
 
     @NonNull
@@ -36,39 +53,33 @@ public class Topicsadapter extends RecyclerView.Adapter<Topicsadapter.topicsview
 
     @Override
     public void onBindViewHolder(@NonNull topicsviewholder holder, int position) {
+        Topics t = topicsList.get(position);
+        holder.data1(t,mvm);
 
-        Topics t = topicsArrayList.get(position);
-        holder.t = t;
-        holder.name_topics.setText(t.getName_topics());
-        holder.num_topics.setText("موضوع: "+t.getNumtopics());
-        holder.img_topics.setImageResource(t.getImg_topics());
 
     }
 
     @Override
     public int getItemCount() {
-        return topicsArrayList.size();
+        return topicsList.size();
     }
 
     class topicsviewholder extends RecyclerView.ViewHolder {
-
+        ItemRvtopicsBinding binding;
         Topics t;
-        ImageView img_topics;
-        TextView name_topics, num_topics;
-
+        private Object Context;
 
         public topicsviewholder(@NonNull View itemView) {
             super(itemView);
-            img_topics = itemView.findViewById(R.id.img_topics);
-            name_topics = itemView.findViewById(R.id.tv_name_topics);
-            num_topics = itemView.findViewById(R.id.tv_num_topics);
-            itemView.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    listenar.onItemClicked(t);
+            binding = ItemRvtopicsBinding.bind(itemView);
 
-                }
-            });
+        }
+        void data1(Topics t, MyViewModel mvm){
+//            binding.imgTopics.setImageURI(t.getImg_topics());
+            binding.tvNameTopics.setText(t.getName_topics());
+            binding.tvNumTopics.setText(t.getNumtopics());
+            Glide.with((Activity) Context).load(t.getImg_topics()).into
+                    (binding.imgTopics);
 
         }
     }

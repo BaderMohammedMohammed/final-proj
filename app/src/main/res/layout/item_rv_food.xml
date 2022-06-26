@@ -70,7 +70,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="4dp"
                     android:layout_marginBottom="4dp"
-                    android:drawableStart="@drawable/profile"
+                    android:drawableStart="@drawable/profile_img"
                     android:drawablePadding="4dp"
                     android:fontFamily="sans-serif-condensed"
                     android:gravity="center|start"

@@ -1,5 +1,6 @@
 package com.example.final_proj1.Adapter;
 
+import android.app.Activity;
 import android.content.Context;
 import android.net.Uri;
 import android.view.LayoutInflater;
@@ -12,18 +13,36 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 
+import com.bumptech.glide.Glide;
+import com.example.final_proj1.Database.MyViewModel;
+import com.example.final_proj1.Models.Food;
 import com.example.final_proj1.Models.Post;
 import com.example.final_proj1.R;
+import com.example.final_proj1.databinding.ItemPostLayoutBinding;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class Postadapter extends RecyclerView.Adapter<Postadapter.postviewholder> {
-    ArrayList<Post> postArrayList;
+    List<Post> postList;
     Context context;
+    MyViewModel mvm;
 
-    public Postadapter(ArrayList<Post> postArrayList, Context context) {
-        this.postArrayList = postArrayList;
-        this.context=context;
+    public Postadapter(List<Post> postList, Context context, MyViewModel mvm) {
+        this.postList = postList;
+        this.context = context;
+        this.mvm = mvm;
+    }
+
+    public Postadapter(List<Post> postList, Context context) {
+    }
+
+    public List<Post> getPostList() {
+        return postList;
+    }
+
+    public void setPostList(List<Post> postList) {
+        this.postList = postList;
     }
 
     @NonNull
@@ -36,41 +55,34 @@ public class Postadapter extends RecyclerView.Adapter<Postadapter.postviewholder
     @Override
     public void onBindViewHolder(@NonNull postviewholder holder, int position) {
 
-        Post p = postArrayList.get(position);
-        holder.p = p;
-        holder.comment_post.setText(p.getComment_post()+" comment");
-        holder.like_post.setText(p.getLike_post()+" like");
-        holder.name_doctor.setText(p.getName_doctor());
-        holder.body_post.setText(p.getBody_post());
-        holder.date_publication.setText(p.getDate_publication()+"h ago");
-        holder.img_doctor.setImageURI(Uri.parse(p.getImg_doctor()));
-        holder.img_content_post.setImageURI(Uri.parse(p.getImg_content()));
+        Post p = postList.get(position);
+        holder.data1(p,mvm);
 
     }
 
     @Override
     public int getItemCount() {
-        return postArrayList.size();
+        return postList.size();
     }
 
     class postviewholder extends RecyclerView.ViewHolder {
-
+        ItemPostLayoutBinding binding;
         Post p;
-        ImageView img_doctor,img_content_post;
-        TextView comment_post,like_post,name_doctor,body_post,date_publication;
-
+        private Object Context;
 
         public postviewholder(@NonNull View itemView) {
             super(itemView);
-            img_doctor=itemView.findViewById(R.id.profile_image);
-            img_content_post=itemView.findViewById(R.id.img_content_post);
-            comment_post=itemView.findViewById(R.id.tv_comment_post);
-            like_post=itemView.findViewById(R.id.tv_like_post);
-            name_doctor=itemView.findViewById(R.id.tv_name_doctor);
-            body_post=itemView.findViewById(R.id.tv_body_post);
-            date_publication=itemView.findViewById(R.id.tv_date_publication);
+            binding = ItemPostLayoutBinding.bind(itemView);
 
-
+        }
+        void data1(Post post, MyViewModel mvm){
+            binding.tvNameDoctor.setText(post.getName_doctor());
+            binding.tvLikePost.setText(post.getLike_post());
+            binding.tvBodyPost.setText(post.getBody_post());
+            binding.tvDatePublication.setText(post.getDate_publication());
+            binding.tvCommentPost.setText(post.getComment_post());
+            Glide.with((Activity) Context).load(post.getImg_content()).into
+                    (binding.imgContentPost);
         }
     }
 }

@@ -1,5 +1,5 @@
 package com.example.final_proj1.Adapter;
-
+import android.app.Activity;
 import android.content.Context;
 import android.net.Uri;
 import android.view.LayoutInflater;
@@ -11,21 +11,38 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.bumptech.glide.Glide;
+import com.example.final_proj1.Database.MyViewModel;
 import com.example.final_proj1.Models.Food;
 import com.example.final_proj1.Models.ListTopic;
 import com.example.final_proj1.R;
+import com.example.final_proj1.databinding.ItemRvFoodBinding;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class ListFoodadapter extends RecyclerView.Adapter<ListFoodadapter.listtopicviewholder> {
-    ArrayList<Food> listFoodArrayList;
+    List<Food> listFood;
     Context context;
+    MyViewModel mvm;
     OnRVitemclicklistenarListFood listenar;
 
-    public ListFoodadapter(ArrayList<Food> listFoodArrayList, Context context, OnRVitemclicklistenarListFood listenar) {
-        this.listFoodArrayList = listFoodArrayList;
+    public ListFoodadapter(List<Food> listFood, Context context, MyViewModel mvm, OnRVitemclicklistenarListFood listenar) {
+        this.listFood = listFood;
         this.context = context;
+        this.mvm = mvm;
         this.listenar = listenar;
+    }
+
+    public ListFoodadapter() {
+    }
+
+    public List<Food> getListFood() {
+        return listFood;
+    }
+
+    public void setListFood(ArrayList<Food> listFoodArrayList) {
+        this.listFood = listFoodArrayList;
     }
 
     @NonNull
@@ -37,49 +54,36 @@ public class ListFoodadapter extends RecyclerView.Adapter<ListFoodadapter.listto
 
     @Override
     public void onBindViewHolder(@NonNull listtopicviewholder holder, int position) {
-
-        Food f = listFoodArrayList.get(position);
-        holder.f = f;
-        holder.numPerson.setText(f.getNumPerson());
-        holder.nameFood.setText(f.getNameFood());
-        holder.ImageFood.setImageURI(Uri.parse(f.getImageFood()));
-        holder.namePublisher.setText(f.getNamePublisher());
-        holder.timePrepare.setText(f.getTimePrepare());
-        holder.datePublisher.setText(f.getDatePublisher());
-        holder.numLike.setText(f.getNumLike());
-
-
+        Food f = listFood.get(position);
+        holder.data1(f,mvm);
 
     }
 
     @Override
     public int getItemCount() {
-        return listFoodArrayList.size();
+
+        return listFood.size();
     }
 
-    class listtopicviewholder extends RecyclerView.ViewHolder {
-
+    static class listtopicviewholder extends RecyclerView.ViewHolder {
+        ItemRvFoodBinding binding;
         Food f;
         ImageView ImageFood;
-        TextView nameFood,numPerson,namePublisher,timePrepare,datePublisher,numLike;
+        private Object Context;
 
         public listtopicviewholder(@NonNull View itemView) {
             super(itemView);
-            ImageFood = itemView.findViewById(R.id.img_itemfood);
-            nameFood = itemView.findViewById(R.id.tv_name_food);
-            numPerson = itemView.findViewById(R.id.tv_numof_people_eat);
-            namePublisher = itemView.findViewById(R.id.tv_name_publisher);
-            timePrepare = itemView.findViewById(R.id.tv_time_prepare);
-            datePublisher = itemView.findViewById(R.id.tv_date_publisher);
-            numLike = itemView.findViewById(R.id.tv_num_like_to_eat);
-            itemView.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    listenar.onItemClicked(f);
-
-                }
-            });
-
+            binding = ItemRvFoodBinding.bind(itemView);
+        }
+        void data1(Food food, MyViewModel mvm){
+            binding.tvNameFood.setText(food.getNameFood());
+            binding.tvNamePublisher.setText(food.getNamePublisher());
+            binding.tvNumofPeopleEat.setText(food.getNumPerson());
+            binding.tvDatePublisher.setText(food.getDatePublisher());
+            binding.tvTimePrepare.setText(food.getTimePrepare());
+            Glide.with((Activity) Context).load(food.getImageFood()).into
+                    (binding.imgItemfood);
         }
     }
 }
+

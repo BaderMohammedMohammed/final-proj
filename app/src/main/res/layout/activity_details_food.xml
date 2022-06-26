@@ -40,7 +40,7 @@
                 android:layout_weight="0.7"
                 android:gravity="center"
                 android:text="@string/detailsfood"
-                android:textColor="@color/paper"
+                android:textColor="@color/bader_green"
                 android:textSize="24sp"
                 android:textStyle="bold" />
 
@@ -52,7 +52,7 @@
                 android:layout_weight="0.1"
                 android:gravity="center"
                 android:text="15"
-                android:textColor="@color/paper"
+                android:textColor="@color/bader_green"
                 android:textSize="24sp"
                 android:textStyle="bold" />
 
@@ -179,7 +179,7 @@
                     android:id="@+id/img_profileuser_detailsfood"
                     android:layout_width="48dp"
                     android:layout_height="48dp"
-                    android:src="@drawable/profile"/>
+                    android:src="@drawable/profile_img"/>
 
                 <TextView
                     android:id="@+id/tv_name_publisher_detailsfood"
@@ -207,7 +207,7 @@
         android:layout_weight="0.5"
         android:fontFamily="sans-serif-condensed"
         android:text="المكونات"
-        android:textColor="@color/paper"
+        android:textColor="@color/bader_green"
         android:textSize="18sp"
         android:textStyle="bold"
         android:gravity="start"
@@ -256,7 +256,7 @@
                 android:fontFamily="sans-serif-condensed"
                 android:gravity="center"
                 android:text="طريقة التحضير"
-                android:textColor="@color/paper"
+                android:textColor="@color/bader_green"
                 android:textSize="18sp"
                 android:textStyle="bold" />
 
@@ -316,7 +316,7 @@
                         android:background="@drawable/shape_corner24"
                         android:overScrollMode="ifContentScrolls"
                         android:defaultFocusHighlightEnabled="false"
-                        android:textColorHint="@color/paper" />
+                        android:textColorHint="@color/bader_green" />
                     <ImageView
                         android:id="@+id/img_insart_comment_detailsfood"
                         android:layout_width="0dp"
