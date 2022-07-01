@@ -1,5 +1,6 @@
 package com.example.final_proj1.Adapter;
 
+import android.app.Activity;
 import android.content.Context;
 import android.net.Uri;
 import android.view.LayoutInflater;
@@ -12,20 +13,39 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 
+import com.bumptech.glide.Glide;
+import com.example.final_proj1.Database.MyViewModel;
+import com.example.final_proj1.Models.Consultion;
 import com.example.final_proj1.Models.ListTopic;
 import com.example.final_proj1.R;
+import com.example.final_proj1.TopicList;
+import com.example.final_proj1.databinding.ItemRvTopiclistBinding;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class ListTopicadapter extends RecyclerView.Adapter<ListTopicadapter.listtopicviewholder> {
-    ArrayList<ListTopic> listTopicArrayList;
+    List<ListTopic> listTopic;
     Context context;
+    MyViewModel mvm;
     OnRVitemclicklistenarListTopic listenar;
 
-    public ListTopicadapter(ArrayList<ListTopic> listTopicArrayList, Context context, OnRVitemclicklistenarListTopic listenar) {
-        this.listTopicArrayList = listTopicArrayList;
+    public ListTopicadapter(List<ListTopic> listTopic, Context context, MyViewModel mvm, OnRVitemclicklistenarListTopic listenar) {
+        this.listTopic = listTopic;
         this.context = context;
+        this.mvm = mvm;
         this.listenar = listenar;
+    }
+
+    public ListTopicadapter() {
+    }
+
+    public List<ListTopic> getListTopic() {
+        return listTopic;
+    }
+
+    public void setListTopic(List<ListTopic> listTopic) {
+        this.listTopic = listTopic;
     }
 
     @NonNull
@@ -37,40 +57,31 @@ public class ListTopicadapter extends RecyclerView.Adapter<ListTopicadapter.list
 
     @Override
     public void onBindViewHolder(@NonNull listtopicviewholder holder, int position) {
-
-        ListTopic lt = listTopicArrayList.get(position);
-        holder.lt = lt;
-        holder.titel_tobiclist.setText(lt.getTitel_tobiclist());
-        holder.body_tobiclist.setText(lt.getBody_tobiclist());
-        holder.imgtopic.setImageURI(Uri.parse(lt.getImgtopic()));
-
-
+        ListTopic lt = listTopic.get(position);
+        holder.data1(lt,mvm);
     }
 
     @Override
     public int getItemCount() {
-        return listTopicArrayList.size();
+        return listTopic.size();
     }
 
     class listtopicviewholder extends RecyclerView.ViewHolder {
-
+        ItemRvTopiclistBinding binding;
         ListTopic lt;
-        ImageView imgtopic;
-        TextView titel_tobiclist,body_tobiclist;
+        private Object Context;
 
         public listtopicviewholder(@NonNull View itemView) {
             super(itemView);
-            imgtopic = itemView.findViewById(R.id.img_topicsin_item);
-            titel_tobiclist = itemView.findViewById(R.id.tv_title_topic);
-            body_tobiclist = itemView.findViewById(R.id.tv_body_topic);
-            itemView.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    listenar.onItemClicked(lt);
+            binding = ItemRvTopiclistBinding.bind(itemView);
 
-                }
-            });
+        }
 
+        void data1(ListTopic lt, MyViewModel mvm){
+            binding.tvTitleTopic.setText(lt.getTitel_tobiclist());
+            binding.tvBodyTopic.setText(lt.getBody_tobiclist());
+            Glide.with((Activity) Context).load(lt.getImgtopic()).into
+                    (binding.imgTopicsinItem);
         }
     }
 }

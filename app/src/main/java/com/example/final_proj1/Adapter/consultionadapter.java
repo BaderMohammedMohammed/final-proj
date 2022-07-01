@@ -1,5 +1,6 @@
 package com.example.final_proj1.Adapter;
 
+import android.app.Activity;
 import android.content.Context;
 import android.net.Uri;
 import android.view.LayoutInflater;
@@ -11,21 +12,37 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.bumptech.glide.Glide;
+import com.example.final_proj1.Database.MyViewModel;
 import com.example.final_proj1.Models.Consultion;
+import com.example.final_proj1.Models.Food;
 import com.example.final_proj1.Models.Post;
 import com.example.final_proj1.R;
+import com.example.final_proj1.databinding.ItemPostLayoutBinding;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class consultionadapter extends RecyclerView.Adapter<consultionadapter.Consultionviewholder> {
-    ArrayList<Consultion> consultionArrayList;
+    List<Consultion> consultionlist;
     Context context;
+    MyViewModel mvm;
     OnRVitemclicklistenarConsultion listenar;
 
-    public consultionadapter(ArrayList<Consultion> consultionArrayList, Context context, OnRVitemclicklistenarConsultion listenar) {
-        this.consultionArrayList = consultionArrayList;
+    public consultionadapter(List<Consultion> consultionlist, Context context, MyViewModel mvm, OnRVitemclicklistenarConsultion listenar) {
+        this.consultionlist = consultionlist;
         this.context = context;
+        this.mvm = mvm;
         this.listenar = listenar;
+    }
+
+
+    public List<Consultion> getConsultionlist() {
+        return consultionlist;
+    }
+
+    public void setConsultionlist(List<Consultion> consultionlist) {
+        this.consultionlist = consultionlist;
     }
 
     @NonNull
@@ -38,41 +55,35 @@ public class consultionadapter extends RecyclerView.Adapter<consultionadapter.Co
     @Override
     public void onBindViewHolder(@NonNull Consultionviewholder holder, int position) {
 
-        Consultion c = consultionArrayList.get(position);
-        holder.c = c;
-        holder.comment_post.setText(c.getComment_post()+" comment");
-        holder.like_post.setText(c.getLike_post()+" like");
-        holder.name_doctor.setText(c.getName_user());
-        holder.body_post.setText(c.getBody_post());
-        holder.date_publication.setText(c.getDate_publication()+"h ago");
-        holder.img_doctor.setImageURI(Uri.parse(c.getImg_user()));
-        holder.img_content_post.setImageURI(Uri.parse(c.getImg_consultion()));
+        Consultion c = consultionlist.get(position);
+        holder.data1(c,mvm);
 
     }
 
     @Override
     public int getItemCount() {
-        return consultionArrayList.size();
+        return consultionlist.size();
     }
 
-    class Consultionviewholder extends RecyclerView.ViewHolder {
-
+    static class Consultionviewholder extends RecyclerView.ViewHolder {
+        ItemPostLayoutBinding binding;
         Consultion c;
-        ImageView img_doctor,img_content_post;
-        TextView comment_post,like_post,name_doctor,body_post,date_publication;
+        private Object Context;
 
 
         public Consultionviewholder(@NonNull View itemView) {
             super(itemView);
-            img_doctor=itemView.findViewById(R.id.profile_image);
-            img_content_post=itemView.findViewById(R.id.img_content_post);
-            comment_post=itemView.findViewById(R.id.tv_comment_post);
-            like_post=itemView.findViewById(R.id.tv_like_post);
-            name_doctor=itemView.findViewById(R.id.tv_name_doctor);
-            body_post=itemView.findViewById(R.id.tv_body_post);
-            date_publication=itemView.findViewById(R.id.tv_date_publication);
+            binding = ItemPostLayoutBinding.bind(itemView);
+        }
 
-
+        void data1(Consultion c, MyViewModel mvm){
+            binding.tvNameDoctor.setText(c.getName_user());
+            binding.tvCommentPost.setText(c.getComment_post());
+            binding.tvBodyPost.setText(c.getBody_post());
+            binding.tvDatePublication.setText(c.getDate_publication());
+            binding.tvLikePost.setText(c.getLike_post());
+            Glide.with((Activity) Context).load(c.getImg_consultion()).into
+                    (binding.imgContentPost);
         }
     }
 }

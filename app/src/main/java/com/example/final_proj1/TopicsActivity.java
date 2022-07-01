@@ -17,6 +17,8 @@ import java.util.ArrayList;
 public class TopicsActivity extends AppCompatActivity {
     ActivityTopicsBinding binding;
     ArrayList<Topics> topicsArrayList = new ArrayList<>();
+    private Object MyViewModel;
+
     Topicsadapter topicsadapter = new Topicsadapter(topicsArrayList, TopicsActivity.this, new OnRVitemclicklistenar() {
         @Override
         public void onItemClicked(Topics topics) {
@@ -24,7 +26,7 @@ public class TopicsActivity extends AppCompatActivity {
             startActivity(new Intent(TopicsActivity.this, TopicList.class));
 
         }
-    });
+    }, (com.example.final_proj1.Database.MyViewModel) MyViewModel);
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
