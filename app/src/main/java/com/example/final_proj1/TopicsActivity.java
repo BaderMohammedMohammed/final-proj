@@ -7,9 +7,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.GridLayoutManager;
 
 
-import com.example.final_proj1.Adapter.OnRVitemclicklistenar;
+import com.example.final_proj1.Interface.OnRVitemclicklistenar;
 import com.example.final_proj1.Adapter.Topicsadapter;
-import com.example.final_proj1.Models.Topics;
+import com.example.final_proj1.Entity.Topics;
 import com.example.final_proj1.databinding.ActivityTopicsBinding;
 
 import java.util.ArrayList;

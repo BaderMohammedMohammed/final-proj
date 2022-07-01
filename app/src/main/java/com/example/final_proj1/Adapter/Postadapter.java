@@ -2,12 +2,9 @@ package com.example.final_proj1.Adapter;
 
 import android.app.Activity;
 import android.content.Context;
-import android.net.Uri;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
-import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -15,12 +12,10 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
 import com.example.final_proj1.Database.MyViewModel;
-import com.example.final_proj1.Models.Food;
-import com.example.final_proj1.Models.Post;
+import com.example.final_proj1.Entity.Post;
 import com.example.final_proj1.R;
 import com.example.final_proj1.databinding.ItemPostLayoutBinding;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class Postadapter extends RecyclerView.Adapter<Postadapter.postviewholder> {

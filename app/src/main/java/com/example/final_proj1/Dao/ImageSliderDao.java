@@ -7,8 +7,7 @@ import androidx.room.Insert;
 import androidx.room.Query;
 import androidx.room.Update;
 
-import com.example.final_proj1.Models.Food;
-import com.example.final_proj1.Models.ImageSlider;
+import com.example.final_proj1.Entity.ImageSlider;
 
 import java.util.List;
 

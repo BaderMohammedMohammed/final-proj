@@ -4,7 +4,10 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
+import android.text.TextUtils;
 import android.view.View;
+import android.widget.Spinner;
+import android.widget.Toast;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
@@ -14,8 +17,7 @@ import com.example.final_proj1.databinding.ActivityAddFoodBinding;
 
 public class AddFood extends AppCompatActivity {
 ActivityAddFoodBinding binding;
-    private Uri uri;
-    String name ;
+    public static final String FOOD_KEY = "FOOD";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,7 +37,26 @@ ActivityAddFoodBinding binding;
                 finish();
             }
         });
+        binding.btnPublichAddFood.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String nameFood = binding.etNamefoodAddfood.getText().toString();
+                String componentsAddfood = binding.etEnterComponentsAddfood.getText().toString();
+                String prepareFood = binding.etHowtomakeAddfood.getText().toString();
+                String ImageFood = binding.imgFoodAddFood.getDrawable().toString();
+
+                if (TextUtils.isEmpty(nameFood) || TextUtils.isEmpty(componentsAddfood) ||
+                        TextUtils.isEmpty(prepareFood) || TextUtils.isEmpty(ImageFood)){
+                    Toast.makeText(AddFood.this,
+                            "please enter a valid data", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+
+            }
+        });
     }
+
+
 
 
     @Override
