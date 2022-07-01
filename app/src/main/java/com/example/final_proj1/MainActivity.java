@@ -1,27 +1,18 @@
 package com.example.final_proj1;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 
 import android.os.Bundle;
-import android.view.MenuItem;
-import android.view.View;
 import android.widget.Toast;
 
 import com.etebarian.meowbottomnavigation.MeowBottomNavigation;
-import com.example.final_proj1.Adapter.BottomNavigationAdapter;
-import com.example.final_proj1.Adapter.Postadapter;
 import com.example.final_proj1.Dialog.DialogSignOut;
-import com.example.final_proj1.Models.Post;
 import com.example.final_proj1.databinding.ActivityMainBinding;
 import com.example.final_proj1.fragments.ConsultionFragment;
 import com.example.final_proj1.fragments.FoodFragment;
 import com.example.final_proj1.fragments.Fragment_Account_Screen;
 import com.example.final_proj1.fragments.HomeFragment;
-import com.google.android.material.navigation.NavigationBarView;
-
-import java.util.ArrayList;
 
 import kotlin.Unit;
 import kotlin.jvm.functions.Function1;
@@ -38,7 +29,7 @@ public class MainActivity extends AppCompatActivity implements DialogSignOut.OnN
 
 //        bottomNavigationAdapter = new BottomNavigationAdapter(this);
 
-        bottomNavigationAdapter = new BottomNavigationAdapter(this);
+       // bottomNavigationAdapter = new BottomNavigationAdapter(this);
         String ss = "uhuhu";
 
         binding.bottomNav.add(new MeowBottomNavigation.Model(1 , R.drawable.ic_home ));

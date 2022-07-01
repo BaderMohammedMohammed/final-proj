@@ -1,4 +1,4 @@
-package com.example.final_proj1.Models;
+package com.example.final_proj1.Entity;
 
 import androidx.annotation.NonNull;
 import androidx.room.Entity;

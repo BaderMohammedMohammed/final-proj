@@ -1,7 +1,5 @@
 package com.example.final_proj1;
 
-
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -33,7 +31,6 @@ public class MainSettingActivity extends AppCompatActivity implements  DialogPas
                 startActivity(intent);
             }
         });
-
 
         binding.settingsBtnLanguage.setOnClickListener(new View.OnClickListener() {
             @Override

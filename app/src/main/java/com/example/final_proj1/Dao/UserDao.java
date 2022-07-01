@@ -7,7 +7,7 @@ import androidx.room.Insert;
 import androidx.room.Query;
 import androidx.room.Update;
 
-import com.example.final_proj1.Models.User;
+import com.example.final_proj1.Entity.User;
 
 import java.util.List;
 

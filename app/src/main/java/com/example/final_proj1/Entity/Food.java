@@ -1,4 +1,4 @@
-package com.example.final_proj1.Models;
+package com.example.final_proj1.Entity;
 
 import androidx.annotation.NonNull;
 import androidx.room.Entity;
@@ -7,18 +7,31 @@ import androidx.room.PrimaryKey;
 @Entity(tableName = "FoodTable")
 public class Food {
     @PrimaryKey(autoGenerate = true)
-    private String FoodId;
+    private int FoodId;
     @NonNull
     private String ImageFood;
     @NonNull
     private String numLike;
     @NonNull
-    private String nameFood,numPerson , namePublisher ,timePrepare ,datePublisher;
+    private String nameFood;
+    @NonNull
+    private String numPerson;
+    @NonNull
+    private String namePublisher;
+    @NonNull
+    private String timePrepare;
+    @NonNull
+    private String componentsAddfood;
+    @NonNull
+    private String prepareFood;
+    @NonNull
+    private String datePublisher;
+
 
     public Food() {
     }
 
-    public Food(String foodId, @NonNull String imageFood, @NonNull String numLike, @NonNull String nameFood, @NonNull String numPerson, @NonNull String namePublisher, @NonNull String timePrepare, @NonNull String datePublisher) {
+    public Food(int foodId, @NonNull String imageFood, @NonNull String numLike, @NonNull String nameFood, @NonNull String numPerson, @NonNull String namePublisher, @NonNull String timePrepare, @NonNull String componentsAddfood, @NonNull String prepareFood, @NonNull String datePublisher) {
         FoodId = foodId;
         ImageFood = imageFood;
         this.numLike = numLike;
@@ -26,15 +39,34 @@ public class Food {
         this.numPerson = numPerson;
         this.namePublisher = namePublisher;
         this.timePrepare = timePrepare;
+        this.componentsAddfood = componentsAddfood;
+        this.prepareFood = prepareFood;
         this.datePublisher = datePublisher;
-
     }
 
-    public String getFoodId() {
+    @NonNull
+    public String getComponentsAddfood() {
+        return componentsAddfood;
+    }
+
+    public void setComponentsAddfood(@NonNull String componentsAddfood) {
+        this.componentsAddfood = componentsAddfood;
+    }
+
+    @NonNull
+    public String getPrepareFood() {
+        return prepareFood;
+    }
+
+    public void setPrepareFood(@NonNull String prepareFood) {
+        this.prepareFood = prepareFood;
+    }
+
+    public int getFoodId() {
         return FoodId;
     }
 
-    public void setFoodId(String foodId) {
+    public void setFoodId(int foodId) {
         FoodId = foodId;
     }
 

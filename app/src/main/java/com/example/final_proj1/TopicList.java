@@ -8,8 +8,8 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 
 
 import com.example.final_proj1.Adapter.ListTopicadapter;
-import com.example.final_proj1.Adapter.OnRVitemclicklistenarListTopic;
-import com.example.final_proj1.Models.ListTopic;
+import com.example.final_proj1.Interface.OnRVitemclicklistenarListTopic;
+import com.example.final_proj1.Entity.ListTopic;
 import com.example.final_proj1.databinding.ActivityTopicListBinding;
 
 import java.util.ArrayList;
@@ -25,12 +25,12 @@ ListTopicadapter listTopicadapter ;
         binding=ActivityTopicListBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
-        listTopicadapter=new ListTopicadapter(arrayListtopic, TopicList.this, new OnRVitemclicklistenarListTopic() {
-            @Override
-            public void onItemClicked(ListTopic listTopic) {
-                startActivity(new Intent(TopicList.this,DetailsTopic.class));
-            }
-        });
+//        listTopicadapter=new ListTopicadapter(arrayListtopic, TopicList.this, new OnRVitemclicklistenarListTopic() {
+//            @Override
+//            public void onItemClicked(ListTopic listTopic) {
+//                startActivity(new Intent(TopicList.this,DetailsTopic.class));
+//            }
+//        });
 
         arrayListtopic.add(new ListTopic("1","R.drawable.baby", "نصائح هامة لاستحمام الرضيع", "يجب الاهتمام بتحميم رضيعك خلال الاشهر الاولى"));
         arrayListtopic.add(new ListTopic("1","R.drawable.sugar", "استحمام الرضيع", "يجب الاهتمام بتحميم رضيعك خلال الاشهر الاولى"));
