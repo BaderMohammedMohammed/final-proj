@@ -42,30 +42,33 @@
 
     </FrameLayout>
 
-    <com.google.android.material.textfield.TextInputLayout
+    <EditText
         android:id="@+id/signin_et_email"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/_25sdp"
         android:hint="ادخل البريد الالكتروني"
-        android:textColorHint="@color/bader_green">
-        <com.google.android.material.textfield.TextInputEditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="@dimen/_15sdp" />
-    </com.google.android.material.textfield.TextInputLayout>
+        android:textColorHint="@color/bader_green"
+        android:layout_marginEnd="20dp"
+        android:padding="10dp"
+        android:layout_marginStart="20dp"
+        >
+    </EditText>
 
-    <com.google.android.material.textfield.TextInputLayout
+
+
+    <EditText
         android:id="@+id/signin_et_password"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="ادخل كلمة السر"
-        android:textColorHint="@color/bader_green">
-        <com.google.android.material.textfield.TextInputEditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="@dimen/_15sdp" />
-    </com.google.android.material.textfield.TextInputLayout>
+        android:textColorHint="@color/bader_green"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:padding="10dp"
+        >
+    </EditText>
+
 
 
     <TextView

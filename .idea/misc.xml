@@ -108,6 +108,11 @@
         <entry key="..\:/Users/OMEN/Desktop/Final_proj1-master/Final_proj1-master/app/src/main/res/layout/tool_bar.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/OMEN/Desktop/Final_proj1-master/Final_proj1-master/app/src/main/res/menu/bottom_nav_menu.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/OMEN/Desktop/Final_proj1-master/Final_proj1-master/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.124" />
+        <entry key="..\:/Users/rami/OneDrive/المستندات/GitHub/final-proj/app/src/main/res/layout/activity_add_food.xml" value="0.22826086956521738" />
+        <entry key="..\:/Users/rami/OneDrive/المستندات/GitHub/final-proj/app/src/main/res/layout/activity_details_food.xml" value="0.22826086956521738" />
+        <entry key="..\:/Users/rami/OneDrive/المستندات/GitHub/final-proj/app/src/main/res/layout/activity_signin.xml" value="0.22826086956521738" />
+        <entry key="..\:/Users/rami/OneDrive/المستندات/GitHub/final-proj/app/src/main/res/layout/activity_signup.xml" value="0.22826086956521738" />
+        <entry key="..\:/Users/rami/OneDrive/المستندات/GitHub/final-proj/app/src/main/res/layout/fragment_food.xml" value="0.22826086956521738" />
       </map>
     </option>
   </component>

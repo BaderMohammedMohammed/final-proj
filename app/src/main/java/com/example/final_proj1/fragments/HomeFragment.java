@@ -11,13 +11,11 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Toast;
 
 import com.denzcoskun.imageslider.constants.ScaleTypes;
 import com.denzcoskun.imageslider.models.SlideModel;
 import com.example.final_proj1.Adapter.Postadapter;
-import com.example.final_proj1.MainActivity;
-import com.example.final_proj1.Models.Post;
+import com.example.final_proj1.Entity.Post;
 import com.example.final_proj1.R;
 import com.example.final_proj1.TopicsActivity;
 import com.example.final_proj1.databinding.FragmentHomeBinding;

@@ -16,13 +16,13 @@ import com.example.final_proj1.Dao.ListTopicDao;
 import com.example.final_proj1.Dao.PostDao;
 import com.example.final_proj1.Dao.TopicsDao;
 import com.example.final_proj1.Dao.UserDao;
-import com.example.final_proj1.Models.Consultion;
-import com.example.final_proj1.Models.Food;
-import com.example.final_proj1.Models.ImageSlider;
-import com.example.final_proj1.Models.ListTopic;
-import com.example.final_proj1.Models.Post;
-import com.example.final_proj1.Models.Topics;
-import com.example.final_proj1.Models.User;
+import com.example.final_proj1.Entity.Consultion;
+import com.example.final_proj1.Entity.Food;
+import com.example.final_proj1.Entity.ImageSlider;
+import com.example.final_proj1.Entity.ListTopic;
+import com.example.final_proj1.Entity.Post;
+import com.example.final_proj1.Entity.Topics;
+import com.example.final_proj1.Entity.User;
 
 
 import java.util.concurrent.ExecutorService;

@@ -8,8 +8,8 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 
 
 import com.example.final_proj1.Adapter.ListTopicadapter;
-import com.example.final_proj1.Adapter.OnRVitemclicklistenarListTopic;
-import com.example.final_proj1.Models.ListTopic;
+import com.example.final_proj1.Interface.OnRVitemclicklistenarListTopic;
+import com.example.final_proj1.Entity.ListTopic;
 import com.example.final_proj1.databinding.ActivityTopicListBinding;
 
 import java.util.ArrayList;
