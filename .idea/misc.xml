@@ -108,18 +108,15 @@
         <entry key="..\:/Users/OMEN/Desktop/Final_proj1-master/Final_proj1-master/app/src/main/res/layout/tool_bar.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/OMEN/Desktop/Final_proj1-master/Final_proj1-master/app/src/main/res/menu/bottom_nav_menu.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/OMEN/Desktop/Final_proj1-master/Final_proj1-master/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.124" />
-        <entry key="..\:/Users/rami/OneDrive/المستندات/GitHub/final-proj/app/src/main/res/layout/activity_add_consultation.xml" value="0.19202898550724637" />
         <entry key="..\:/Users/rami/OneDrive/المستندات/GitHub/final-proj/app/src/main/res/layout/activity_add_food.xml" value="0.22826086956521738" />
         <entry key="..\:/Users/rami/OneDrive/المستندات/GitHub/final-proj/app/src/main/res/layout/activity_details_food.xml" value="0.22826086956521738" />
-        <entry key="..\:/Users/rami/OneDrive/المستندات/GitHub/final-proj/app/src/main/res/layout/activity_personal_information_screen.xml" value="0.19202898550724637" />
         <entry key="..\:/Users/rami/OneDrive/المستندات/GitHub/final-proj/app/src/main/res/layout/activity_signin.xml" value="0.22826086956521738" />
         <entry key="..\:/Users/rami/OneDrive/المستندات/GitHub/final-proj/app/src/main/res/layout/activity_signup.xml" value="0.22826086956521738" />
         <entry key="..\:/Users/rami/OneDrive/المستندات/GitHub/final-proj/app/src/main/res/layout/fragment_food.xml" value="0.22826086956521738" />
-        <entry key="..\:/Users/rami/OneDrive/المستندات/GitHub/final-proj/app/src/main/res/layout/fragment_home.xml" value="0.11145833333333334" />
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">
