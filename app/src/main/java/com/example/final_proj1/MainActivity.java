@@ -29,7 +29,7 @@ public class MainActivity extends AppCompatActivity implements DialogSignOut.OnN
 
 //        bottomNavigationAdapter = new BottomNavigationAdapter(this);
 
-        bottomNavigationAdapter = new BottomNavigationAdapter(this);
+       // bottomNavigationAdapter = new BottomNavigationAdapter(this);
         String ss = "uhuhu";
 
         binding.bottomNav.add(new MeowBottomNavigation.Model(1 , R.drawable.ic_home ));
