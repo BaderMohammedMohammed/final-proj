@@ -8,7 +8,7 @@ import androidx.room.PrimaryKey;
 @Entity(tableName = "UserTable")
 public class User {
     @PrimaryKey
-    private String id;
+    private int id;
     @NonNull
     private String FirstName;
     @NonNull
@@ -37,7 +37,7 @@ public class User {
     public User() {
     }
 
-    public User(String id, @NonNull String firstName, @NonNull String lastName, @NonNull String email, @NonNull String password, @NonNull String image, double weight, double length, @Nullable String currentIllness, double age, @Nullable String formerIllness, @Nullable String gender, @Nullable String smoked) {
+    public User(int id, @NonNull String firstName, @NonNull String lastName, @NonNull String email, @NonNull String password, @NonNull String image, double weight, double length, @Nullable String currentIllness, double age, @Nullable String formerIllness, @Nullable String gender, @Nullable String smoked) {
         this.id = id;
         FirstName = firstName;
         LastName = lastName;
@@ -53,11 +53,11 @@ public class User {
         this.smoked = smoked;
     }
 
-    public String getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(int id) {
         this.id = id;
     }
 

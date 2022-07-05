@@ -9,10 +9,7 @@ import android.view.View;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.final_proj1.Entity.Consultion;
-import com.example.final_proj1.Entity.Food;
 import com.example.final_proj1.databinding.ActivityAddConsultationBinding;
-import com.google.firebase.firestore.FirebaseFirestore;
 
 
 public class AddConsultation extends AppCompatActivity {
@@ -37,31 +34,11 @@ ActivityAddConsultationBinding binding;
                 finish();
             }
         });
-
-        binding.btnPublichTopublic.setOnClickListener(view->{
-
-
-
-            addConsultation(new Consultion(),succes->{
-
-            },error->{
-
-            });
-
-        });
     }
 
 
 
-    private void addConsultation(Consultion consultion, Listiner<String> successListener, Listiner<Throwable> errorListener){
-        FirebaseFirestore.getInstance()
-                .collection("Consultion")
-                .add(consultion)
-                .addOnSuccessListener(documentReference -> {
-                    successListener.getData("done!!");
-                })
-                .addOnFailureListener(errorListener::getData);
-    }
+
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);

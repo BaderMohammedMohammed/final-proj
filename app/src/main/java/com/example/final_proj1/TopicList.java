@@ -25,12 +25,12 @@ ListTopicadapter listTopicadapter ;
         binding=ActivityTopicListBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
-//        listTopicadapter=new ListTopicadapter(arrayListtopic, TopicList.this, new OnRVitemclicklistenarListTopic() {
-//            @Override
-//            public void onItemClicked(ListTopic listTopic) {
-//                startActivity(new Intent(TopicList.this,DetailsTopic.class));
-//            }
-//        });
+        listTopicadapter=new ListTopicadapter(arrayListtopic, TopicList.this, new OnRVitemclicklistenarListTopic() {
+            @Override
+            public void onItemClicked(ListTopic listTopic) {
+                startActivity(new Intent(TopicList.this,DetailsTopic.class));
+            }
+        });
 
         arrayListtopic.add(new ListTopic("1","R.drawable.baby", "نصائح هامة لاستحمام الرضيع", "يجب الاهتمام بتحميم رضيعك خلال الاشهر الاولى"));
         arrayListtopic.add(new ListTopic("1","R.drawable.sugar", "استحمام الرضيع", "يجب الاهتمام بتحميم رضيعك خلال الاشهر الاولى"));
