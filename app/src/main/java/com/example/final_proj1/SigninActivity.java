@@ -44,9 +44,12 @@ public class SigninActivity extends AppCompatActivity {
 
 
 
-        binding.signinBtnSave.setOnClickListener(new View.OnClickListener() {
+        binding.signinTvRegistar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Intent intent = new Intent(SigninActivity.this,SignupActivity.class);
+                startActivity(intent);
+
                 auth.signInWithEmailAndPassword(binding.signinEtEmail.getText().toString(), binding.signinEtPassword.getText().toString())
                         .addOnSuccessListener(new OnSuccessListener<AuthResult>() {
                             @Override

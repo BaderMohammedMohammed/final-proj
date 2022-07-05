@@ -41,7 +41,7 @@ public class SignupActivity extends AppCompatActivity {
         binding.signupBtnSave.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-//                 int id = Integer.parseInt(binding.signupEtId.getText().toString());
+                 int id = Integer.parseInt(binding.signupEtId.getText().toString());
                 String firstName = binding.signupEtFirstname.getText().toString();
                 String lastName = binding.signupEtLastname.getText().toString();
                 String email = binding.signupEtEmail.getText().toString();
@@ -53,8 +53,8 @@ public class SignupActivity extends AppCompatActivity {
                     @Override
                     public void onSuccess(@NonNull AuthResult authResult) {
                         User users = new User();
-                        DocumentReference documentReference = firebaseFirestore.collection("User").document(authResult.getUser().getUid());
-                        users.setId(authResult.getUser().getUid());
+                        DocumentReference documentReference = firebaseFirestore.collection("User").document(String.valueOf(id));
+                        users.setId(Integer.parseInt(documentReference.getId()));
                         documentReference.set(users).addOnCompleteListener(new OnCompleteListener<Void>() {
                             @Override
                             public void onComplete(@NonNull Task<Void> task) {
