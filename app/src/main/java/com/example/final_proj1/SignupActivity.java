@@ -54,7 +54,7 @@ public class SignupActivity extends AppCompatActivity {
                     public void onSuccess(@NonNull AuthResult authResult) {
                         User users = new User();
                         DocumentReference documentReference = firebaseFirestore.collection("User").document(String.valueOf(id));
-                        users.setId(Integer.parseInt(documentReference.getId()));
+                        users.setId(String.valueOf(Integer.parseInt(documentReference.getId())));
                         documentReference.set(users).addOnCompleteListener(new OnCompleteListener<Void>() {
                             @Override
                             public void onComplete(@NonNull Task<Void> task) {
