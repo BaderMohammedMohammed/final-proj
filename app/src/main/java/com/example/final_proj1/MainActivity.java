@@ -11,7 +11,7 @@ import com.example.final_proj1.Dialog.DialogSignOut;
 import com.example.final_proj1.databinding.ActivityMainBinding;
 import com.example.final_proj1.fragments.ConsultionFragment;
 import com.example.final_proj1.fragments.FoodFragment;
-import com.example.final_proj1.fragments.Fragment_Account_Screen;
+import com.example.final_proj1.fragments.FragmentAccountScreen;
 import com.example.final_proj1.fragments.HomeFragment;
 
 import kotlin.Unit;
@@ -52,7 +52,7 @@ public class MainActivity extends AppCompatActivity implements DialogSignOut.OnN
                     }
                     break;
                     case 3 : {
-                        bottom_sheet_DialogFragment psdf = new bottom_sheet_DialogFragment();
+                        bottomSheetDialogFragment psdf = new bottomSheetDialogFragment();
                         psdf.show(getSupportFragmentManager(), null);
                         fragment = psdf ;
                     }
@@ -62,7 +62,7 @@ public class MainActivity extends AppCompatActivity implements DialogSignOut.OnN
                     }
                     break;
                     case 5 : {
-                        fragment = new Fragment_Account_Screen();
+                        fragment = new FragmentAccountScreen();
                     }
                     break;
                 }

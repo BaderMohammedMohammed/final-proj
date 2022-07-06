@@ -7,7 +7,7 @@ import androidx.viewpager2.adapter.FragmentStateAdapter;
 
 import com.example.final_proj1.fragments.ConsultionFragment;
 import com.example.final_proj1.fragments.FoodFragment;
-import com.example.final_proj1.fragments.Fragment_Account_Screen;
+import com.example.final_proj1.fragments.FragmentAccountScreen;
 import com.example.final_proj1.fragments.HomeFragment;
 
 public class BottomNavigationAdapter extends FragmentStateAdapter {
@@ -28,7 +28,7 @@ public class BottomNavigationAdapter extends FragmentStateAdapter {
             case 2:
                 return new ConsultionFragment();
             default:
-                return new Fragment_Account_Screen();
+                return new FragmentAccountScreen();
         }
     }
 

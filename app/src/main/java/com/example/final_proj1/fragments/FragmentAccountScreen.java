@@ -22,7 +22,7 @@ import com.example.final_proj1.TopicsActivity;
 import com.example.final_proj1.databinding.FragmentAccountScreenBinding;
 
 
-public class Fragment_Account_Screen extends Fragment {
+public class FragmentAccountScreen extends Fragment {
 
     FragmentAccountScreenBinding binding ;
     @Override

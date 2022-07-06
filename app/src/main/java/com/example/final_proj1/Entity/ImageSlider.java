@@ -1,36 +1,32 @@
 package com.example.final_proj1.Entity;
 
-import androidx.annotation.NonNull;
-import androidx.room.Entity;
-import androidx.room.PrimaryKey;
 
-@Entity(tableName = "SliderTable")
 public class ImageSlider {
-    @PrimaryKey
-    private int id;
-    @NonNull
+    private String id;
     private String imageSlide;
 
 
-    public ImageSlider(int id, @NonNull String imageSlide) {
+    public ImageSlider() {
+    }
+
+    public ImageSlider(String id, String imageSlide) {
         this.id = id;
         this.imageSlide = imageSlide;
     }
 
-    public int getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(String id) {
         this.id = id;
     }
 
-    @NonNull
     public String getImageSlide() {
         return imageSlide;
     }
 
-    public void setImageSlide(@NonNull String imageSlide) {
+    public void setImageSlide(String imageSlide) {
         this.imageSlide = imageSlide;
     }
 }

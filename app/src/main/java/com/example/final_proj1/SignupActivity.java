@@ -11,7 +11,6 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Toast;
 
-import com.example.final_proj1.Database.MyViewModel;
 import com.example.final_proj1.Entity.User;
 import com.example.final_proj1.databinding.ActivitySignupBinding;
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -35,7 +34,6 @@ public class SignupActivity extends AppCompatActivity {
         setContentView(binding.getRoot());
         auth = FirebaseAuth.getInstance();
         firebaseFirestore = FirebaseFirestore.getInstance();
-        MyViewModel myViewModel = new ViewModelProvider(this).get(MyViewModel.class);
 
 
         binding.signupBtnSave.setOnClickListener(new View.OnClickListener() {
@@ -48,13 +46,12 @@ public class SignupActivity extends AppCompatActivity {
                 String password = binding.signupEtPass.getText().toString();
                 String repassword = binding.signupEtRepass.getText().toString();
                 User users = new User();
-                myViewModel.insertUser(users);
                 auth.createUserWithEmailAndPassword(email,password).addOnSuccessListener(new OnSuccessListener<AuthResult>() {
                     @Override
                     public void onSuccess(@NonNull AuthResult authResult) {
                         User users = new User();
                         DocumentReference documentReference = firebaseFirestore.collection("User").document(String.valueOf(id));
-                        users.setId(Integer.parseInt(documentReference.getId()));
+                        users.setId(String.valueOf(Integer.parseInt(documentReference.getId())));
                         documentReference.set(users).addOnCompleteListener(new OnCompleteListener<Void>() {
                             @Override
                             public void onComplete(@NonNull Task<Void> task) {

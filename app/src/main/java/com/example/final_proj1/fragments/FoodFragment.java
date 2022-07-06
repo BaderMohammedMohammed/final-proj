@@ -20,7 +20,6 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.final_proj1.Adapter.ListFoodadapter;
-import com.example.final_proj1.Database.MyViewModel;
 import com.example.final_proj1.Interface.OnRVitemclicklistenarListFood;
 import com.example.final_proj1.DetailsFood;
 import com.example.final_proj1.Entity.Food;
@@ -32,7 +31,6 @@ public class FoodFragment extends Fragment {
     FragmentFoodBinding binding ;
     ArrayList<Food> foodArrayList=new ArrayList<>();
     ListFoodadapter foodadapter ;
-    MyViewModel myViewModel;
     public static final String FOOD_KEY = "FOOD";
 
 
@@ -51,13 +49,6 @@ public class FoodFragment extends Fragment {
             new ActivityResultCallback<ActivityResult>() {
                 @Override
                 public void onActivityResult(ActivityResult result) {
-                    if (result.getResultCode()==RESULT_OK && result.getData()
-                            != null){
-                        Food food = (Food) result.getData()
-                                .getSerializableExtra(FOOD_KEY);
-                        myViewModel.insertFood(food);
-
-                    }
                 }
             }
     );
@@ -65,15 +56,14 @@ public class FoodFragment extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        MyViewModel viewModel = new ViewModelProvider(this).
-                get(MyViewModel.class);
-        foodadapter = new ListFoodadapter(new ArrayList<>(),myViewModel);
+
+        foodadapter = new ListFoodadapter();
         binding.rvListfood.setAdapter(foodadapter);
         binding.rvListfood.setLayoutManager(new LinearLayoutManager(getContext()));
         binding.rvListfood.setHasFixedSize(true);
 
         startActivity(new Intent(getContext(), DetailsFood.class));
-        foodadapter=new ListFoodadapter(foodArrayList, getContext(), (com.example.final_proj1.Database.MyViewModel) myViewModel, new OnRVitemclicklistenarListFood() {
+        foodadapter=new ListFoodadapter(foodArrayList, getContext(), new OnRVitemclicklistenarListFood() {
             @Override
             public void onItemClicked(Food listFood) {
 

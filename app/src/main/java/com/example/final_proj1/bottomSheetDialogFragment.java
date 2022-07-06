@@ -14,7 +14,7 @@ import com.example.final_proj1.databinding.FragmentItemBottomsheetDialogBinding;
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment;
 
 
-public class bottom_sheet_DialogFragment extends BottomSheetDialogFragment {
+public class bottomSheetDialogFragment extends BottomSheetDialogFragment {
 
     private FragmentItemBottomsheetDialogBinding binding;
      BottomSheetListener listener;

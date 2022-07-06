@@ -1,26 +1,20 @@
 package com.example.final_proj1.Entity;
 
-import androidx.annotation.NonNull;
-import androidx.room.Entity;
-import androidx.room.PrimaryKey;
 
-@Entity(tableName = "TopicsTable")
 public class Topics {
-    @PrimaryKey(autoGenerate = true)
     private String id;
-    @NonNull
     private int img_topics;
-    @NonNull
-    private String name_topics,numtopics;
+    private String name_topics;
+    private String numtopics;
 
-    public Topics(String id, int img_topics, @NonNull String name_topics, @NonNull String numtopics) {
+    public Topics() {
+    }
+
+    public Topics(String id, int img_topics, String name_topics, String numtopics) {
         this.id = id;
         this.img_topics = img_topics;
         this.name_topics = name_topics;
         this.numtopics = numtopics;
-    }
-
-    public Topics() {
     }
 
     public String getId() {
@@ -39,21 +33,19 @@ public class Topics {
         this.img_topics = img_topics;
     }
 
-    @NonNull
     public String getName_topics() {
         return name_topics;
     }
 
-    public void setName_topics(@NonNull String name_topics) {
+    public void setName_topics(String name_topics) {
         this.name_topics = name_topics;
     }
 
-    @NonNull
     public String getNumtopics() {
         return numtopics;
     }
 
-    public void setNumtopics(@NonNull String numtopics) {
+    public void setNumtopics(String numtopics) {
         this.numtopics = numtopics;
     }
 }
