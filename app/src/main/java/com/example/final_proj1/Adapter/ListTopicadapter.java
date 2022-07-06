@@ -11,7 +11,6 @@ import androidx.recyclerview.widget.RecyclerView;
 
 
 import com.bumptech.glide.Glide;
-import com.example.final_proj1.Database.MyViewModel;
 import com.example.final_proj1.Entity.ListTopic;
 import com.example.final_proj1.Interface.OnRVitemclicklistenarListTopic;
 import com.example.final_proj1.R;
@@ -22,13 +21,12 @@ import java.util.List;
 public class ListTopicadapter extends RecyclerView.Adapter<ListTopicadapter.listtopicviewholder> {
     List<ListTopic> listTopic;
     Context context;
-    MyViewModel mvm;
     OnRVitemclicklistenarListTopic listenar;
 
-    public ListTopicadapter(List<ListTopic> listTopic, Context context, MyViewModel mvm, OnRVitemclicklistenarListTopic listenar) {
+
+    public ListTopicadapter(List<ListTopic> listTopic, Context context, OnRVitemclicklistenarListTopic listenar) {
         this.listTopic = listTopic;
         this.context = context;
-        this.mvm = mvm;
         this.listenar = listenar;
     }
 
@@ -53,7 +51,7 @@ public class ListTopicadapter extends RecyclerView.Adapter<ListTopicadapter.list
     @Override
     public void onBindViewHolder(@NonNull listtopicviewholder holder, int position) {
         ListTopic lt = listTopic.get(position);
-        holder.data1(lt,mvm);
+        holder.data1(lt);
     }
 
     @Override
@@ -72,7 +70,7 @@ public class ListTopicadapter extends RecyclerView.Adapter<ListTopicadapter.list
 
         }
 
-        void data1(ListTopic lt, MyViewModel mvm){
+        void data1(ListTopic lt){
             binding.tvTitleTopic.setText(lt.getTitel_tobiclist());
             binding.tvBodyTopic.setText(lt.getBody_tobiclist());
             Glide.with((Activity) Context).load(lt.getImgtopic()).into

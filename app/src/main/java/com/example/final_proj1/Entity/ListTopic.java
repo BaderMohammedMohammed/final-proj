@@ -1,22 +1,17 @@
 package com.example.final_proj1.Entity;
 
-import androidx.annotation.NonNull;
-import androidx.room.Entity;
-import androidx.room.PrimaryKey;
 
-@Entity(tableName = "ListTopicTable")
+
 public class ListTopic {
-    @PrimaryKey(autoGenerate = true)
     private String id;
-    @NonNull
     private String imgtopic;
-    @NonNull
-    private String titel_tobiclist,body_tobiclist;
+    private String titel_tobiclist;
+    private String body_tobiclist;
 
     public ListTopic() {
     }
 
-    public ListTopic(String id, @NonNull String imgtopic, @NonNull String titel_tobiclist, @NonNull String body_tobiclist) {
+    public ListTopic(String id, String imgtopic, String titel_tobiclist, String body_tobiclist) {
         this.id = id;
         this.imgtopic = imgtopic;
         this.titel_tobiclist = titel_tobiclist;
@@ -31,30 +26,27 @@ public class ListTopic {
         this.id = id;
     }
 
-    @NonNull
     public String getImgtopic() {
         return imgtopic;
     }
 
-    public void setImgtopic(@NonNull String imgtopic) {
+    public void setImgtopic(String imgtopic) {
         this.imgtopic = imgtopic;
     }
 
-    @NonNull
     public String getTitel_tobiclist() {
         return titel_tobiclist;
     }
 
-    public void setTitel_tobiclist(@NonNull String titel_tobiclist) {
+    public void setTitel_tobiclist(String titel_tobiclist) {
         this.titel_tobiclist = titel_tobiclist;
     }
 
-    @NonNull
     public String getBody_tobiclist() {
         return body_tobiclist;
     }
 
-    public void setBody_tobiclist(@NonNull String body_tobiclist) {
+    public void setBody_tobiclist(String body_tobiclist) {
         this.body_tobiclist = body_tobiclist;
     }
 }

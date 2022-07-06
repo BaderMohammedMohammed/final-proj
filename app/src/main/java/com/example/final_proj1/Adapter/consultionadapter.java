@@ -10,7 +10,6 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
-import com.example.final_proj1.Database.MyViewModel;
 import com.example.final_proj1.Entity.Consultion;
 import com.example.final_proj1.Interface.OnRVitemclicklistenarConsultion;
 import com.example.final_proj1.R;
@@ -21,16 +20,13 @@ import java.util.List;
 public class consultionadapter extends RecyclerView.Adapter<consultionadapter.Consultionviewholder> {
     List<Consultion> consultionlist;
     Context context;
-    MyViewModel mvm;
     OnRVitemclicklistenarConsultion listenar;
 
-    public consultionadapter(List<Consultion> consultionlist, Context context, MyViewModel mvm, OnRVitemclicklistenarConsultion listenar) {
+    public consultionadapter(List<Consultion> consultionlist, Context context, OnRVitemclicklistenarConsultion listenar) {
         this.consultionlist = consultionlist;
         this.context = context;
-        this.mvm = mvm;
         this.listenar = listenar;
     }
-
 
     public List<Consultion> getConsultionlist() {
         return consultionlist;
@@ -51,7 +47,7 @@ public class consultionadapter extends RecyclerView.Adapter<consultionadapter.Co
     public void onBindViewHolder(@NonNull Consultionviewholder holder, int position) {
 
         Consultion c = consultionlist.get(position);
-        holder.data1(c,mvm);
+        holder.data1(c);
 
     }
 
@@ -71,7 +67,7 @@ public class consultionadapter extends RecyclerView.Adapter<consultionadapter.Co
             binding = ItemPostLayoutBinding.bind(itemView);
         }
 
-        void data1(Consultion c, MyViewModel mvm){
+        void data1(Consultion c){
             binding.tvNameDoctor.setText(c.getName_user());
             binding.tvCommentPost.setText(c.getComment_post());
             binding.tvBodyPost.setText(c.getBody_post());

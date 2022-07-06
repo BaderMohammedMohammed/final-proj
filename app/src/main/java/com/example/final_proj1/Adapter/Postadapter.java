@@ -11,7 +11,6 @@ import androidx.recyclerview.widget.RecyclerView;
 
 
 import com.bumptech.glide.Glide;
-import com.example.final_proj1.Database.MyViewModel;
 import com.example.final_proj1.Entity.Post;
 import com.example.final_proj1.R;
 import com.example.final_proj1.databinding.ItemPostLayoutBinding;
@@ -21,15 +20,11 @@ import java.util.List;
 public class Postadapter extends RecyclerView.Adapter<Postadapter.postviewholder> {
     List<Post> postList;
     Context context;
-    MyViewModel mvm;
 
-    public Postadapter(List<Post> postList, Context context, MyViewModel mvm) {
-        this.postList = postList;
-        this.context = context;
-        this.mvm = mvm;
-    }
 
     public Postadapter(List<Post> postList, Context context) {
+        this.postList = postList;
+        this.context = context;
     }
 
     public List<Post> getPostList() {
@@ -51,7 +46,7 @@ public class Postadapter extends RecyclerView.Adapter<Postadapter.postviewholder
     public void onBindViewHolder(@NonNull postviewholder holder, int position) {
 
         Post p = postList.get(position);
-        holder.data1(p,mvm);
+        holder.data1(p);
 
     }
 
@@ -70,7 +65,7 @@ public class Postadapter extends RecyclerView.Adapter<Postadapter.postviewholder
             binding = ItemPostLayoutBinding.bind(itemView);
 
         }
-        void data1(Post post, MyViewModel mvm){
+        void data1(Post post){
             binding.tvNameDoctor.setText(post.getName_doctor());
             binding.tvLikePost.setText(post.getLike_post());
             binding.tvBodyPost.setText(post.getBody_post());

@@ -1,43 +1,25 @@
 package com.example.final_proj1.Entity;
 
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-import androidx.room.Entity;
-import androidx.room.PrimaryKey;
 
-@Entity(tableName = "UserTable")
 public class User {
-    @PrimaryKey
     private String id;
-    @NonNull
     private String FirstName;
-    @NonNull
     private String LastName;
-    @NonNull
     private String Email;
-    @NonNull
     private String  password;
-    @NonNull
     private String image;
-    @Nullable
     private double Weight;
-    @Nullable
     private double Length;
-    @Nullable
     private String CurrentIllness;
-    @Nullable
     private double Age;
-    @Nullable
     private String FormerIllness;
-    @Nullable
     private String Gender ;
-    @Nullable
     private String smoked ;
 
     public User() {
     }
 
-    public User(String id, @NonNull String firstName, @NonNull String lastName, @NonNull String email, @NonNull String password, @NonNull String image, double weight, double length, @Nullable String currentIllness, double age, @Nullable String formerIllness, @Nullable String gender, @Nullable String smoked) {
+    public User(String id, String firstName, String lastName, String email, String password, String image, double weight, double length, String currentIllness, double age, String formerIllness, String gender, String smoked) {
         this.id = id;
         FirstName = firstName;
         LastName = lastName;
@@ -61,48 +43,43 @@ public class User {
         this.id = id;
     }
 
-    @NonNull
     public String getFirstName() {
         return FirstName;
     }
 
-    public void setFirstName(@NonNull String firstName) {
+    public void setFirstName(String firstName) {
         FirstName = firstName;
     }
 
-    @NonNull
     public String getLastName() {
         return LastName;
     }
 
-    public void setLastName(@NonNull String lastName) {
+    public void setLastName(String lastName) {
         LastName = lastName;
     }
 
-    @NonNull
     public String getEmail() {
         return Email;
     }
 
-    public void setEmail(@NonNull String email) {
+    public void setEmail(String email) {
         Email = email;
     }
 
-    @NonNull
     public String getPassword() {
         return password;
     }
 
-    public void setPassword(@NonNull String password) {
+    public void setPassword(String password) {
         this.password = password;
     }
 
-    @NonNull
     public String getImage() {
         return image;
     }
 
-    public void setImage(@NonNull String image) {
+    public void setImage(String image) {
         this.image = image;
     }
 
@@ -122,12 +99,11 @@ public class User {
         Length = length;
     }
 
-    @Nullable
     public String getCurrentIllness() {
         return CurrentIllness;
     }
 
-    public void setCurrentIllness(@Nullable String currentIllness) {
+    public void setCurrentIllness(String currentIllness) {
         CurrentIllness = currentIllness;
     }
 
@@ -139,30 +115,27 @@ public class User {
         Age = age;
     }
 
-    @Nullable
     public String getFormerIllness() {
         return FormerIllness;
     }
 
-    public void setFormerIllness(@Nullable String formerIllness) {
+    public void setFormerIllness(String formerIllness) {
         FormerIllness = formerIllness;
     }
 
-    @Nullable
     public String getGender() {
         return Gender;
     }
 
-    public void setGender(@Nullable String gender) {
+    public void setGender(String gender) {
         Gender = gender;
     }
 
-    @Nullable
     public String getSmoked() {
         return smoked;
     }
 
-    public void setSmoked(@Nullable String smoked) {
+    public void setSmoked(String smoked) {
         this.smoked = smoked;
     }
 }

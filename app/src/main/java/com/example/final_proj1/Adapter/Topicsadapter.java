@@ -10,7 +10,6 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
-import com.example.final_proj1.Database.MyViewModel;
 import com.example.final_proj1.Entity.Topics;
 import com.example.final_proj1.Interface.OnRVitemclicklistenar;
 import com.example.final_proj1.R;
@@ -22,13 +21,11 @@ public class Topicsadapter extends RecyclerView.Adapter<Topicsadapter.topicsview
     List<Topics> topicsList;
     Context context;
     OnRVitemclicklistenar listenar;
-    MyViewModel mvm;
 
-    public Topicsadapter(List<Topics> topicsList, Context context, OnRVitemclicklistenar listenar, MyViewModel mvm) {
+    public Topicsadapter(List<Topics> topicsList, Context context, OnRVitemclicklistenar listenar) {
         this.topicsList = topicsList;
         this.context = context;
         this.listenar = listenar;
-        this.mvm = mvm;
     }
 
     public List<Topics> getTopicsList() {
@@ -49,7 +46,7 @@ public class Topicsadapter extends RecyclerView.Adapter<Topicsadapter.topicsview
     @Override
     public void onBindViewHolder(@NonNull topicsviewholder holder, int position) {
         Topics t = topicsList.get(position);
-        holder.data1(t,mvm);
+        holder.data1(t);
 
 
     }
@@ -69,7 +66,7 @@ public class Topicsadapter extends RecyclerView.Adapter<Topicsadapter.topicsview
             binding = ItemRvtopicsBinding.bind(itemView);
 
         }
-        void data1(Topics t, MyViewModel mvm){
+        void data1(Topics t){
 //            binding.imgTopics.setImageURI(t.getImg_topics());
             binding.tvNameTopics.setText(t.getName_topics());
             binding.tvNumTopics.setText(t.getNumtopics());

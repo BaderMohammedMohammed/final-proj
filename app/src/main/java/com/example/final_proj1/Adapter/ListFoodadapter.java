@@ -10,7 +10,6 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
-import com.example.final_proj1.Database.MyViewModel;
 import com.example.final_proj1.Entity.Food;
 import com.example.final_proj1.Interface.OnRVitemclicklistenarListFood;
 import com.example.final_proj1.R;
@@ -22,22 +21,17 @@ import java.util.List;
 public class ListFoodadapter extends RecyclerView.Adapter<ListFoodadapter.listtopicviewholder> {
     List<Food> listFood;
     Context context;
-    MyViewModel mvm;
     OnRVitemclicklistenarListFood listenar;
 
-    public ListFoodadapter(List<Food> listFood, Context context, MyViewModel mvm, OnRVitemclicklistenarListFood listenar) {
+    public ListFoodadapter(List<Food> listFood, Context context, OnRVitemclicklistenarListFood listenar) {
         this.listFood = listFood;
         this.context = context;
-        this.mvm = mvm;
         this.listenar = listenar;
     }
 
     public ListFoodadapter() {
     }
 
-    public <E> ListFoodadapter(ArrayList<E> es, MyViewModel myViewModel) {
-
-    }
 
     public List<Food> getListFood() {
         return listFood;
@@ -57,7 +51,7 @@ public class ListFoodadapter extends RecyclerView.Adapter<ListFoodadapter.listto
     @Override
     public void onBindViewHolder(@NonNull listtopicviewholder holder, int position) {
         Food f = listFood.get(position);
-        holder.data1(f,mvm);
+        holder.data1(f);
 
     }
 
@@ -77,7 +71,7 @@ public class ListFoodadapter extends RecyclerView.Adapter<ListFoodadapter.listto
             super(itemView);
             binding = ItemRvFoodBinding.bind(itemView);
         }
-        void data1(Food food, MyViewModel mvm){
+        void data1(Food food){
             binding.tvNameFood.setText(food.getNameFood());
             binding.tvNamePublisher.setText(food.getNamePublisher());
             binding.tvNumofPeopleEat.setText(food.getNumPerson());
